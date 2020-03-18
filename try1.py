@@ -49,7 +49,7 @@ def ms_to_s(ms):
     m_part = (ms // 1000) // 60
     m_part = str(m_part).zfill(2)
 
-    # srt的时间格式
+    # srt time
     s_type = "00:" + m_part + ":" + s_part + "," + ms_part
     return s_type
 
@@ -82,4 +82,4 @@ if __name__ == '__main__':
         # print(text)
         text_2 = text_to_str(inx, text, start_t[inx], end_t[inx])
         str_to_file(text_2)
-        print(str(round((inx / len(pieces)) * 100)) + '%')
+        print(str((inx * 100 / len(pieces))) + '%')
