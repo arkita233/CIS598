@@ -1,6 +1,8 @@
 # CIS598
 Repo for Cis598
 
+Sixiang's TimeLog
+https://drive.google.com/file/d/1UlBNH9MDgwAuIikWIoc0e5Uwn-MeZII4/view?usp=sharing
 
 DeepSpeech2
 https://github.com/PaddlePaddle/DeepSpeech
