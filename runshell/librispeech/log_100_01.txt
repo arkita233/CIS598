@@ -1,0 +1,2933 @@
+num_iter_print: 100
+num_rnn_layers: 3
+num_samples: 5000
+output_model_dir: ./checkpoints/libri
+rnn_layer_size: 2048
+save_epoch: 1
+share_rnn_weights: 1
+shuffle_method: batch_shuffle_clipped
+specgram_type: linear
+test_off: 0
+train_manifest: data/librispeech/manifest.train
+use_gpu: 1
+use_gru: 0
+use_sortagrad: 1
+vocab_path: data/librispeech/vocab.txt
+------------------------------------------------
+W0322 21:52:26.493147  7226 device_context.cc:237] Please NOTE: device: 0, CUDA Capability: 61, Driver API Version: 10.1, Runtime API Version: 10.0
+W0322 21:52:26.495771  7226 device_context.cc:245] device: 0, cuDNN Version: 7.6.
+I0322 21:52:27.516374  7226 parallel_executor.cc:440] The Program will be executed on CUDA using ParallelExecutor, 1 cards are used, so 1 programs are executed in parallel.
+I0322 21:52:27.524719  7226 build_strategy.cc:365] SeqOnlyAllReduceOps:0, num_trainers:1
+I0322 21:52:27.535930  7226 parallel_executor.cc:307] Inplace strategy is enabled, when build_strategy.enable_inplace = True
+I0322 21:52:27.541280  7226 parallel_executor.cc:375] Garbage collection strategy is enabled, when FLAGS_eager_delete_tensor_gb = 0
+epoch: 0, batch: 0, train loss: 132.799500
+
+epoch: 0, batch: 100, train loss: 99.536705
+
+epoch: 0, batch: 200, train loss: 143.343796
+
+epoch: 0, batch: 300, train loss: 173.205902
+
+epoch: 0, batch: 400, train loss: 157.966263
+
+epoch: 0, batch: 500, train loss: 160.267899
+
+epoch: 0, batch: 600, train loss: 168.062653
+
+^CTraceback (most recent call last):
+  File "train.py", line 142, in <module>
+    main()
+  File "train.py", line 138, in main
+    train()
+  File "train.py", line 133, in train
+    test_off=args.test_off)
+  File "/home/sixiangz/DeepSpeech/model_utils/model.py", line 349, in train
+    return_numpy=False)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 778, in run
+    use_program_cache=use_program_cache)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 843, in _run_impl
+    return_numpy=return_numpy)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 677, in _run_parallel
+    tensors = exe.run(fetch_var_names)._move_to_list()
+KeyboardInterrupt
+
+(base) sixiangz@Aya-Suisei:~/DeepSpeech/examples/librispeech$ clear
+
+(base) sixiangz@Aya-Suisei:~/DeepSpeech/examples/librispeech$ sh run_train_100.sh 
+-----------  Configuration Arguments -----------
+augment_conf_path: conf/augmentation.config
+batch_size: 5
+dev_manifest: data/librispeech/manifest.dev-clean
+init_from_pretrained_model: None
+is_local: 1
+learning_rate: 0.0005
+max_duration: 27.0
+mean_std_path: data/librispeech/mean_std.npz
+min_duration: 0.0
+num_conv_layers: 2
+num_epoch: 50
+num_iter_print: 100
+num_rnn_layers: 3
+num_samples: 5000
+output_model_dir: ./checkpoints/libri
+rnn_layer_size: 2048
+save_epoch: 1
+share_rnn_weights: 1
+shuffle_method: batch_shuffle_clipped
+specgram_type: linear
+test_off: 0
+train_manifest: data/librispeech/manifest.train
+use_gpu: 1
+use_gru: 0
+use_sortagrad: 1
+vocab_path: data/librispeech/vocab.txt
+------------------------------------------------
+W0322 22:00:25.295800  7271 device_context.cc:237] Please NOTE: device: 0, CUDA Capability: 61, Driver API Version: 10.1, Runtime API Version: 10.0
+W0322 22:00:25.298362  7271 device_context.cc:245] device: 0, cuDNN Version: 7.6.
+I0322 22:00:26.270380  7271 parallel_executor.cc:440] The Program will be executed on CUDA using ParallelExecutor, 1 cards are used, so 1 programs are executed in parallel.
+I0322 22:00:26.277026  7271 build_strategy.cc:365] SeqOnlyAllReduceOps:0, num_trainers:1
+I0322 22:00:26.286430  7271 parallel_executor.cc:307] Inplace strategy is enabled, when build_strategy.enable_inplace = True
+I0322 22:00:26.291286  7271 parallel_executor.cc:375] Garbage collection strategy is enabled, when FLAGS_eager_delete_tensor_gb = 0
+epoch: 0, batch: 0, train loss: 137.818140
+
+epoch: 0, batch: 100, train loss: 98.395026
+
+epoch: 0, batch: 200, train loss: 118.139282
+
+epoch: 0, batch: 300, train loss: 132.140063
+
+epoch: 0, batch: 400, train loss: 135.638611
+
+epoch: 0, batch: 500, train loss: 147.304224
+
+epoch: 0, batch: 600, train loss: 168.844458
+
+epoch: 0, batch: 700, train loss: 171.154980
+
+epoch: 0, batch: 800, train loss: 185.210107
+
+epoch: 0, batch: 900, train loss: 182.571204
+
+epoch: 0, batch: 1000, train loss: 179.074365
+
+epoch: 0, batch: 1100, train loss: 165.071094
+
+epoch: 0, batch: 1200, train loss: 172.845679
+
+epoch: 0, batch: 1300, train loss: 172.159253
+
+epoch: 0, batch: 1400, train loss: 136.933386
+
+epoch: 0, batch: 1500, train loss: 209.656812
+
+epoch: 0, batch: 1600, train loss: 184.770239
+
+epoch: 0, batch: 1700, train loss: 145.780774
+
+epoch: 0, batch: 1800, train loss: 155.300952
+
+epoch: 0, batch: 1900, train loss: 118.154700
+
+epoch: 0, batch: 2000, train loss: 157.051050
+
+epoch: 0, batch: 2100, train loss: 144.751929
+
+epoch: 0, batch: 2200, train loss: 189.932104
+
+epoch: 0, batch: 2300, train loss: 122.623584
+
+epoch: 0, batch: 2400, train loss: 143.549329
+
+epoch: 0, batch: 2500, train loss: 175.021948
+
+epoch: 0, batch: 2600, train loss: 155.360693
+
+epoch: 0, batch: 2700, train loss: 158.683105
+
+epoch: 0, batch: 2800, train loss: 131.769946
+
+epoch: 0, batch: 2900, train loss: 121.629749
+
+epoch: 0, batch: 3000, train loss: 118.078149
+
+epoch: 0, batch: 3100, train loss: 158.360938
+
+epoch: 0, batch: 3200, train loss: 113.197339
+
+epoch: 0, batch: 3300, train loss: 128.250806
+
+epoch: 0, batch: 3400, train loss: 111.192700
+
+epoch: 0, batch: 3500, train loss: 122.277502
+
+epoch: 0, batch: 3600, train loss: 117.510620
+
+epoch: 0, batch: 3700, train loss: 91.806561
+
+epoch: 0, batch: 3800, train loss: 94.322571
+
+epoch: 0, batch: 3900, train loss: 149.856299
+
+epoch: 0, batch: 4000, train loss: 100.214801
+
+epoch: 0, batch: 4100, train loss: 129.104834
+
+epoch: 0, batch: 4200, train loss: 113.125452
+
+epoch: 0, batch: 4300, train loss: 128.744702
+
+epoch: 0, batch: 4400, train loss: 122.858484
+
+epoch: 0, batch: 4500, train loss: 128.566528
+
+epoch: 0, batch: 4600, train loss: 63.414685
+
+epoch: 0, batch: 4700, train loss: 102.779260
+
+epoch: 0, batch: 4800, train loss: 107.670996
+
+epoch: 0, batch: 4900, train loss: 100.801514
+
+epoch: 0, batch: 5000, train loss: 116.585339
+
+epoch: 0, batch: 5100, train loss: 109.827026
+
+epoch: 0, batch: 5200, train loss: 109.888428
+
+epoch: 0, batch: 5300, train loss: 114.825269
+
+epoch: 0, batch: 5400, train loss: 88.937518
+
+epoch: 0, batch: 5500, train loss: 114.739160
+
+epoch: 0, batch: 5600, train loss: 115.660339
+
+epoch: 0, batch: 5700, train loss: 112.252258
+
+
+----------Begin test...
+--------Time: 20553.493273 sec, epoch: 0, train loss: 134.520462, test loss: 53.626569
+save parameters at ./checkpoints/libri/epoch_0
+epoch: 1, batch: 0, train loss: 87.901514
+
+epoch: 1, batch: 100, train loss: 68.793555
+
+epoch: 1, batch: 200, train loss: 84.870996
+
+epoch: 1, batch: 300, train loss: 58.006653
+
+epoch: 1, batch: 400, train loss: 78.588159
+
+epoch: 1, batch: 500, train loss: 71.937573
+
+epoch: 1, batch: 600, train loss: 98.582196
+
+epoch: 1, batch: 700, train loss: 96.160992
+
+epoch: 1, batch: 800, train loss: 41.205722
+
+epoch: 1, batch: 900, train loss: 109.970898
+
+epoch: 1, batch: 1000, train loss: 61.541284
+
+epoch: 1, batch: 1100, train loss: 63.927606
+
+epoch: 1, batch: 1200, train loss: 119.421509
+
+epoch: 1, batch: 1300, train loss: 97.660742
+
+epoch: 1, batch: 1400, train loss: 78.988538
+
+epoch: 1, batch: 1500, train loss: 90.331519
+
+epoch: 1, batch: 1600, train loss: 57.715857
+
+epoch: 1, batch: 1700, train loss: 72.332361
+
+epoch: 1, batch: 1800, train loss: 40.155078
+
+epoch: 1, batch: 1900, train loss: 59.548224
+
+epoch: 1, batch: 2000, train loss: 46.503412
+
+epoch: 1, batch: 2100, train loss: 63.763696
+
+epoch: 1, batch: 2200, train loss: 55.667004
+
+epoch: 1, batch: 2300, train loss: 63.657245
+
+epoch: 1, batch: 2400, train loss: 59.746460
+
+epoch: 1, batch: 2500, train loss: 58.789142
+
+epoch: 1, batch: 2600, train loss: 72.132489
+
+epoch: 1, batch: 2700, train loss: 62.223853
+
+epoch: 1, batch: 2800, train loss: 31.912842
+
+epoch: 1, batch: 2900, train loss: 62.631854
+
+epoch: 1, batch: 3000, train loss: 76.325293
+
+epoch: 1, batch: 3100, train loss: 14.250925
+
+epoch: 1, batch: 3200, train loss: 53.717767
+
+epoch: 1, batch: 3300, train loss: 49.453723
+
+epoch: 1, batch: 3400, train loss: 60.183270
+
+epoch: 1, batch: 3500, train loss: 47.017523
+
+epoch: 1, batch: 3600, train loss: 73.368481
+
+epoch: 1, batch: 3700, train loss: 76.532513
+
+epoch: 1, batch: 3800, train loss: 46.985272
+
+epoch: 1, batch: 3900, train loss: 91.621112
+
+epoch: 1, batch: 4000, train loss: 67.931616
+
+epoch: 1, batch: 4100, train loss: 46.157556
+
+epoch: 1, batch: 4200, train loss: 52.998907
+
+epoch: 1, batch: 4300, train loss: 45.845688
+
+epoch: 1, batch: 4400, train loss: 39.131018
+
+epoch: 1, batch: 4500, train loss: 73.333698
+
+epoch: 1, batch: 4600, train loss: 86.823914
+
+epoch: 1, batch: 4700, train loss: 54.865363
+
+epoch: 1, batch: 4800, train loss: 39.572778
+
+epoch: 1, batch: 4900, train loss: 56.304584
+
+epoch: 1, batch: 5000, train loss: 56.152606
+
+epoch: 1, batch: 5100, train loss: 49.767712
+
+epoch: 1, batch: 5200, train loss: 62.219989
+
+epoch: 1, batch: 5300, train loss: 55.984985
+
+epoch: 1, batch: 5400, train loss: 30.958731
+
+epoch: 1, batch: 5500, train loss: 80.091742
+
+epoch: 1, batch: 5600, train loss: 40.404626
+
+epoch: 1, batch: 5700, train loss: 52.226245
+
+
+----------Begin test...
+--------Time: 20551.784424 sec, epoch: 1, train loss: 63.705112, test loss: 41.248422
+save parameters at ./checkpoints/libri/epoch_1
+epoch: 2, batch: 0, train loss: 36.429736
+
+epoch: 2, batch: 100, train loss: 46.791241
+
+epoch: 2, batch: 200, train loss: 45.912225
+
+epoch: 2, batch: 300, train loss: 43.565045
+
+epoch: 2, batch: 400, train loss: 41.471487
+
+epoch: 2, batch: 500, train loss: 46.535895
+
+epoch: 2, batch: 600, train loss: 24.155858
+
+epoch: 2, batch: 700, train loss: 44.993607
+
+epoch: 2, batch: 800, train loss: 37.009732
+
+epoch: 2, batch: 900, train loss: 28.988742
+
+epoch: 2, batch: 1000, train loss: 13.532448
+
+epoch: 2, batch: 1100, train loss: 27.217294
+
+epoch: 2, batch: 1200, train loss: 25.506519
+
+epoch: 2, batch: 1300, train loss: 36.780084
+
+epoch: 2, batch: 1400, train loss: 42.729169
+
+epoch: 2, batch: 1500, train loss: 42.844717
+
+epoch: 2, batch: 1600, train loss: 29.828696
+
+epoch: 2, batch: 1700, train loss: 53.736475
+
+epoch: 2, batch: 1800, train loss: 14.062700
+
+epoch: 2, batch: 1900, train loss: 48.258777
+
+epoch: 2, batch: 2000, train loss: 6.007040
+
+epoch: 2, batch: 2100, train loss: 41.524051
+
+epoch: 2, batch: 2200, train loss: 64.919043
+
+epoch: 2, batch: 2300, train loss: 11.654061
+
+epoch: 2, batch: 2400, train loss: 13.388783
+
+epoch: 2, batch: 2500, train loss: 36.416766
+
+epoch: 2, batch: 2600, train loss: 38.282245
+
+epoch: 2, batch: 2700, train loss: 30.026990
+
+epoch: 2, batch: 2800, train loss: 34.762393
+
+epoch: 2, batch: 2900, train loss: 27.154181
+
+epoch: 2, batch: 3000, train loss: 42.855591
+
+epoch: 2, batch: 3100, train loss: 19.888730
+
+epoch: 2, batch: 3200, train loss: 24.618326
+
+epoch: 2, batch: 3300, train loss: 20.967943
+
+epoch: 2, batch: 3400, train loss: 56.446967
+
+epoch: 2, batch: 3500, train loss: 32.897360
+
+epoch: 2, batch: 3600, train loss: 48.681415
+
+epoch: 2, batch: 3700, train loss: 34.299213
+
+epoch: 2, batch: 3800, train loss: 35.721979
+
+epoch: 2, batch: 3900, train loss: 36.932523
+
+epoch: 2, batch: 4000, train loss: 32.038364
+
+epoch: 2, batch: 4100, train loss: 57.458405
+
+epoch: 2, batch: 4200, train loss: 33.328140
+
+epoch: 2, batch: 4300, train loss: 25.425052
+
+epoch: 2, batch: 4400, train loss: 40.065460
+
+epoch: 2, batch: 4500, train loss: 30.575562
+
+epoch: 2, batch: 4600, train loss: 23.538617
+
+epoch: 2, batch: 4700, train loss: 31.801813
+
+epoch: 2, batch: 4800, train loss: 35.182315
+
+epoch: 2, batch: 4900, train loss: 48.622012
+
+epoch: 2, batch: 5000, train loss: 30.152133
+
+epoch: 2, batch: 5100, train loss: 40.865094
+
+epoch: 2, batch: 5200, train loss: 35.797861
+
+epoch: 2, batch: 5300, train loss: 18.191093
+
+epoch: 2, batch: 5400, train loss: 34.294196
+
+epoch: 2, batch: 5500, train loss: 33.099237
+
+epoch: 2, batch: 5600, train loss: 43.823895
+
+epoch: 2, batch: 5700, train loss: 32.805841
+
+
+----------Begin test...
+--------Time: 20549.363813 sec, epoch: 2, train loss: 34.738983, test loss: 37.685333
+save parameters at ./checkpoints/libri/epoch_2
+epoch: 3, batch: 0, train loss: 31.382535
+
+epoch: 3, batch: 100, train loss: 26.792749
+
+epoch: 3, batch: 200, train loss: 28.487680
+
+epoch: 3, batch: 300, train loss: 15.328204
+
+epoch: 3, batch: 400, train loss: 18.434775
+
+epoch: 3, batch: 500, train loss: 25.138951
+
+epoch: 3, batch: 600, train loss: 9.393801
+
+epoch: 3, batch: 700, train loss: 24.557834
+
+epoch: 3, batch: 800, train loss: 22.313223
+
+epoch: 3, batch: 900, train loss: 21.807187
+
+epoch: 3, batch: 1000, train loss: 18.465120
+
+epoch: 3, batch: 1100, train loss: 21.504196
+
+epoch: 3, batch: 1200, train loss: 25.231390
+
+epoch: 3, batch: 1300, train loss: 35.070486
+
+epoch: 3, batch: 1400, train loss: 5.631515
+
+epoch: 3, batch: 1500, train loss: 5.270053
+
+epoch: 3, batch: 1600, train loss: 26.116492
+
+epoch: 3, batch: 1700, train loss: 18.921010
+
+epoch: 3, batch: 1800, train loss: 9.770520
+
+epoch: 3, batch: 1900, train loss: 1.509737
+
+epoch: 3, batch: 2000, train loss: 36.407523
+
+epoch: 3, batch: 2100, train loss: 22.725540
+
+epoch: 3, batch: 2200, train loss: 23.872791
+
+epoch: 3, batch: 2300, train loss: 28.275955
+
+epoch: 3, batch: 2400, train loss: 33.009451
+
+epoch: 3, batch: 2500, train loss: 30.788681
+
+epoch: 3, batch: 2600, train loss: 28.715976
+
+epoch: 3, batch: 2700, train loss: 19.136328
+
+epoch: 3, batch: 2800, train loss: 23.414774
+
+epoch: 3, batch: 2900, train loss: 38.811279
+
+epoch: 3, batch: 3000, train loss: 31.256265
+
+epoch: 3, batch: 3100, train loss: 25.766220
+
+epoch: 3, batch: 3200, train loss: 16.116064
+
+epoch: 3, batch: 3300, train loss: 14.385394
+
+epoch: 3, batch: 3400, train loss: 37.402127
+
+epoch: 3, batch: 3500, train loss: 17.521239
+
+epoch: 3, batch: 3600, train loss: 52.551160
+
+epoch: 3, batch: 3700, train loss: 23.506259
+
+epoch: 3, batch: 3800, train loss: 25.807944
+
+epoch: 3, batch: 3900, train loss: 15.424585
+
+epoch: 3, batch: 4000, train loss: 4.369829
+
+epoch: 3, batch: 4100, train loss: 21.247516
+
+epoch: 3, batch: 4200, train loss: 38.850150
+
+epoch: 3, batch: 4300, train loss: 34.926968
+
+epoch: 3, batch: 4400, train loss: 32.402448
+
+epoch: 3, batch: 4500, train loss: 41.066663
+
+epoch: 3, batch: 4600, train loss: 24.916826
+
+epoch: 3, batch: 4700, train loss: 26.425720
+
+epoch: 3, batch: 4800, train loss: 6.942615
+
+epoch: 3, batch: 4900, train loss: 33.443167
+
+epoch: 3, batch: 5000, train loss: 22.382048
+
+epoch: 3, batch: 5100, train loss: 27.008929
+
+epoch: 3, batch: 5200, train loss: 40.353903
+
+epoch: 3, batch: 5300, train loss: 31.533978
+
+epoch: 3, batch: 5400, train loss: 33.085370
+
+epoch: 3, batch: 5500, train loss: 12.525330
+
+epoch: 3, batch: 5600, train loss: 23.263220
+
+epoch: 3, batch: 5700, train loss: 38.093173
+
+
+----------Begin test...
+--------Time: 20546.958863 sec, epoch: 3, train loss: 24.635530, test loss: 37.497736
+save parameters at ./checkpoints/libri/epoch_3
+epoch: 4, batch: 0, train loss: 17.542792
+
+epoch: 4, batch: 100, train loss: 27.226437
+
+epoch: 4, batch: 200, train loss: 13.134564
+
+epoch: 4, batch: 300, train loss: 23.190372
+
+epoch: 4, batch: 400, train loss: 29.471426
+
+epoch: 4, batch: 500, train loss: 23.394118
+
+epoch: 4, batch: 600, train loss: 4.740812
+
+epoch: 4, batch: 700, train loss: 21.188548
+
+epoch: 4, batch: 800, train loss: 20.664835
+
+epoch: 4, batch: 900, train loss: 1.993942
+
+epoch: 4, batch: 1000, train loss: 9.609939
+
+epoch: 4, batch: 1100, train loss: 18.495688
+
+epoch: 4, batch: 1200, train loss: 13.528391
+
+epoch: 4, batch: 1300, train loss: 30.280862
+
+epoch: 4, batch: 1400, train loss: 21.705623
+
+epoch: 4, batch: 1500, train loss: 18.748961
+
+epoch: 4, batch: 1600, train loss: 24.509953
+
+epoch: 4, batch: 1700, train loss: 0.390666
+
+epoch: 4, batch: 1800, train loss: 42.112338
+
+epoch: 4, batch: 1900, train loss: 21.658888
+
+epoch: 4, batch: 2000, train loss: 11.693611
+
+epoch: 4, batch: 2100, train loss: 2.125339
+
+epoch: 4, batch: 2200, train loss: 23.145961
+
+epoch: 4, batch: 2300, train loss: 14.127072
+
+epoch: 4, batch: 2400, train loss: 31.017206
+
+epoch: 4, batch: 2500, train loss: 19.724712
+
+epoch: 4, batch: 2600, train loss: 20.549289
+
+epoch: 4, batch: 2700, train loss: 39.747446
+
+epoch: 4, batch: 2800, train loss: 18.258061
+
+epoch: 4, batch: 2900, train loss: 33.208847
+
+epoch: 4, batch: 3000, train loss: 15.959932
+
+epoch: 4, batch: 3100, train loss: 14.792322
+
+epoch: 4, batch: 3200, train loss: 14.179155
+
+epoch: 4, batch: 3300, train loss: 31.574747
+
+epoch: 4, batch: 3400, train loss: 10.045126
+
+epoch: 4, batch: 3500, train loss: 26.986285
+
+epoch: 4, batch: 3600, train loss: 34.120880
+
+epoch: 4, batch: 3700, train loss: 22.088010
+
+epoch: 4, batch: 3800, train loss: 1.029490
+
+epoch: 4, batch: 3900, train loss: 38.170837
+
+epoch: 4, batch: 4000, train loss: 2.381927
+
+epoch: 4, batch: 4100, train loss: 39.725162
+
+epoch: 4, batch: 4200, train loss: 2.718101
+
+epoch: 4, batch: 4300, train loss: 7.729224
+
+epoch: 4, batch: 4400, train loss: 23.750647
+
+epoch: 4, batch: 4500, train loss: 30.566098
+
+epoch: 4, batch: 4600, train loss: 15.663695
+
+epoch: 4, batch: 4700, train loss: 13.734166
+
+epoch: 4, batch: 4800, train loss: 23.365331
+
+epoch: 4, batch: 4900, train loss: 3.578410
+
+epoch: 4, batch: 5000, train loss: 8.795375
+
+epoch: 4, batch: 5100, train loss: 13.233693
+
+epoch: 4, batch: 5200, train loss: 33.534314
+
+epoch: 4, batch: 5300, train loss: 28.303693
+
+epoch: 4, batch: 5400, train loss: 25.901422
+
+epoch: 4, batch: 5500, train loss: 5.735801
+
+epoch: 4, batch: 5600, train loss: 1.683634
+
+epoch: 4, batch: 5700, train loss: 17.142606
+
+
+----------Begin test...
+--------Time: 20545.427054 sec, epoch: 4, train loss: 19.028910, test loss: 37.796500
+save parameters at ./checkpoints/libri/epoch_4
+epoch: 5, batch: 0, train loss: 15.007224
+
+epoch: 5, batch: 100, train loss: 12.961800
+
+epoch: 5, batch: 200, train loss: 25.683087
+
+epoch: 5, batch: 300, train loss: 4.403792
+
+epoch: 5, batch: 400, train loss: 12.032614
+
+epoch: 5, batch: 500, train loss: 10.826292
+
+epoch: 5, batch: 600, train loss: 4.839024
+
+epoch: 5, batch: 700, train loss: 18.174371
+
+epoch: 5, batch: 800, train loss: 2.454528
+
+epoch: 5, batch: 900, train loss: 34.438324
+
+epoch: 5, batch: 1000, train loss: 24.981873
+
+epoch: 5, batch: 1100, train loss: 13.686673
+
+epoch: 5, batch: 1200, train loss: 32.780725
+
+epoch: 5, batch: 1300, train loss: 14.676321
+
+epoch: 5, batch: 1400, train loss: 16.182338
+
+epoch: 5, batch: 1500, train loss: 21.342973
+
+epoch: 5, batch: 1600, train loss: 22.832173
+
+epoch: 5, batch: 1700, train loss: 17.495663
+
+epoch: 5, batch: 1800, train loss: 24.618054
+
+epoch: 5, batch: 1900, train loss: 23.191840
+
+epoch: 5, batch: 2000, train loss: 11.022839
+
+epoch: 5, batch: 2100, train loss: 20.811230
+
+epoch: 5, batch: 2200, train loss: 16.561475
+
+epoch: 5, batch: 2300, train loss: 36.620599
+
+epoch: 5, batch: 2400, train loss: 5.814776
+
+epoch: 5, batch: 2500, train loss: 17.657639
+
+epoch: 5, batch: 2600, train loss: 16.147620
+
+epoch: 5, batch: 2700, train loss: 26.667261
+
+epoch: 5, batch: 2800, train loss: 30.411526
+
+epoch: 5, batch: 2900, train loss: 17.373782
+
+epoch: 5, batch: 3000, train loss: 17.097307
+
+epoch: 5, batch: 3100, train loss: 10.954140
+
+epoch: 5, batch: 3200, train loss: 40.259717
+
+epoch: 5, batch: 3300, train loss: 18.416666
+
+epoch: 5, batch: 3400, train loss: 24.245930
+
+epoch: 5, batch: 3500, train loss: 12.779874
+
+epoch: 5, batch: 3600, train loss: 16.714627
+
+epoch: 5, batch: 3700, train loss: 18.886209
+
+epoch: 5, batch: 3800, train loss: 19.754979
+
+epoch: 5, batch: 3900, train loss: 16.119411
+
+epoch: 5, batch: 4000, train loss: 25.630048
+
+epoch: 5, batch: 4100, train loss: 22.923424
+
+epoch: 5, batch: 4200, train loss: 5.515762
+
+epoch: 5, batch: 4300, train loss: 21.214551
+
+epoch: 5, batch: 4400, train loss: 20.140056
+
+epoch: 5, batch: 4500, train loss: 28.235361
+
+epoch: 5, batch: 4600, train loss: 17.123364
+
+epoch: 5, batch: 4700, train loss: 20.470764
+
+epoch: 5, batch: 4800, train loss: 9.880521
+
+epoch: 5, batch: 4900, train loss: 6.323730
+
+epoch: 5, batch: 5000, train loss: 0.553907
+
+epoch: 5, batch: 5100, train loss: 18.344641
+
+epoch: 5, batch: 5200, train loss: 21.801740
+
+epoch: 5, batch: 5300, train loss: 34.720569
+
+epoch: 5, batch: 5400, train loss: 22.231003
+
+epoch: 5, batch: 5500, train loss: 18.542093
+
+epoch: 5, batch: 5600, train loss: 13.777126
+
+epoch: 5, batch: 5700, train loss: 19.200854
+
+
+----------Begin test...
+--------Time: 20542.974138 sec, epoch: 5, train loss: 18.509600, test loss: 37.981256
+save parameters at ./checkpoints/libri/epoch_5
+epoch: 6, batch: 0, train loss: 10.444923
+
+epoch: 6, batch: 100, train loss: 14.667374
+
+epoch: 6, batch: 200, train loss: 18.562511
+
+epoch: 6, batch: 300, train loss: 28.933008
+
+epoch: 6, batch: 400, train loss: 27.058377
+
+epoch: 6, batch: 500, train loss: 13.338428
+
+epoch: 6, batch: 600, train loss: 28.064136
+
+epoch: 6, batch: 700, train loss: 23.463876
+
+epoch: 6, batch: 800, train loss: 0.666857
+
+epoch: 6, batch: 900, train loss: 19.035210
+
+epoch: 6, batch: 1000, train loss: 3.724766
+
+epoch: 6, batch: 1100, train loss: 24.018576
+
+epoch: 6, batch: 1200, train loss: 26.652777
+
+epoch: 6, batch: 1300, train loss: 35.702460
+
+epoch: 6, batch: 1400, train loss: 12.878310
+
+epoch: 6, batch: 1500, train loss: 27.126849
+
+epoch: 6, batch: 1600, train loss: 19.869281
+
+epoch: 6, batch: 1700, train loss: 22.047188
+
+epoch: 6, batch: 1800, train loss: 15.739178
+
+epoch: 6, batch: 1900, train loss: 16.117154
+
+epoch: 6, batch: 2000, train loss: 22.441525
+
+epoch: 6, batch: 2100, train loss: 14.125606
+
+epoch: 6, batch: 2200, train loss: 23.893221
+
+epoch: 6, batch: 2300, train loss: 21.291060
+
+epoch: 6, batch: 2400, train loss: 10.843569
+
+epoch: 6, batch: 2500, train loss: 17.072498
+
+epoch: 6, batch: 2600, train loss: 18.775392
+
+epoch: 6, batch: 2700, train loss: 0.767103
+
+epoch: 6, batch: 2800, train loss: 29.639816
+
+epoch: 6, batch: 2900, train loss: 4.146054
+
+epoch: 6, batch: 3000, train loss: 5.820831
+
+epoch: 6, batch: 3100, train loss: 31.352646
+
+epoch: 6, batch: 3200, train loss: 18.263782
+
+epoch: 6, batch: 3300, train loss: 22.046625
+
+epoch: 6, batch: 3400, train loss: 17.923978
+
+epoch: 6, batch: 3500, train loss: 29.957501
+
+epoch: 6, batch: 3600, train loss: 34.652438
+
+epoch: 6, batch: 3700, train loss: 22.687228
+
+epoch: 6, batch: 3800, train loss: 24.890961
+
+epoch: 6, batch: 3900, train loss: 29.111465
+
+epoch: 6, batch: 4000, train loss: 32.449570
+
+epoch: 6, batch: 4100, train loss: 23.830966
+
+epoch: 6, batch: 4200, train loss: 11.508763
+
+epoch: 6, batch: 4300, train loss: 21.359456
+
+epoch: 6, batch: 4400, train loss: 28.511859
+
+epoch: 6, batch: 4500, train loss: 13.917513
+
+epoch: 6, batch: 4600, train loss: 37.217368
+
+epoch: 6, batch: 4700, train loss: 19.831540
+
+epoch: 6, batch: 4800, train loss: 15.817409
+
+epoch: 6, batch: 4900, train loss: 25.627631
+
+epoch: 6, batch: 5000, train loss: 2.225614
+
+epoch: 6, batch: 5100, train loss: 48.694226
+
+epoch: 6, batch: 5200, train loss: 22.886159
+
+epoch: 6, batch: 5300, train loss: 26.877347
+
+epoch: 6, batch: 5400, train loss: 12.934367
+
+epoch: 6, batch: 5500, train loss: 12.423955
+
+epoch: 6, batch: 5600, train loss: 10.049255
+
+epoch: 6, batch: 5700, train loss: 25.858459
+
+
+----------Begin test...
+--------Time: 20545.083618 sec, epoch: 6, train loss: 20.341999, test loss: 37.978781
+save parameters at ./checkpoints/libri/epoch_6
+epoch: 7, batch: 0, train loss: 24.024397
+
+epoch: 7, batch: 100, train loss: 20.742911
+
+epoch: 7, batch: 200, train loss: 14.562283
+
+epoch: 7, batch: 300, train loss: 21.270305
+
+epoch: 7, batch: 400, train loss: 24.774141
+
+epoch: 7, batch: 500, train loss: 13.242261
+
+epoch: 7, batch: 600, train loss: 19.630376
+
+epoch: 7, batch: 700, train loss: 29.947333
+
+epoch: 7, batch: 800, train loss: 16.949417
+
+epoch: 7, batch: 900, train loss: 22.724228
+
+epoch: 7, batch: 1000, train loss: 20.626518
+
+epoch: 7, batch: 1100, train loss: 15.503673
+
+epoch: 7, batch: 1200, train loss: 20.426389
+
+epoch: 7, batch: 1300, train loss: 7.467722
+
+epoch: 7, batch: 1400, train loss: 20.549774
+
+epoch: 7, batch: 1500, train loss: 17.410971
+
+epoch: 7, batch: 1600, train loss: 11.432507
+
+epoch: 7, batch: 1700, train loss: 18.862874
+
+epoch: 7, batch: 1800, train loss: 14.232231
+
+epoch: 7, batch: 1900, train loss: 19.304675
+
+epoch: 7, batch: 2000, train loss: 13.045566
+
+epoch: 7, batch: 2100, train loss: 16.168968
+
+epoch: 7, batch: 2200, train loss: 20.768549
+
+epoch: 7, batch: 2300, train loss: 30.971671
+
+epoch: 7, batch: 2400, train loss: 12.998950
+
+epoch: 7, batch: 2500, train loss: 19.379694
+
+epoch: 7, batch: 2600, train loss: 18.198341
+
+epoch: 7, batch: 2700, train loss: 17.050685
+
+epoch: 7, batch: 2800, train loss: 26.936548
+
+epoch: 7, batch: 2900, train loss: 21.338121
+
+epoch: 7, batch: 3000, train loss: 1.616525
+
+epoch: 7, batch: 3100, train loss: 21.918182
+
+epoch: 7, batch: 3200, train loss: 16.395810
+
+epoch: 7, batch: 3300, train loss: 15.965759
+
+epoch: 7, batch: 3400, train loss: 24.327142
+
+epoch: 7, batch: 3500, train loss: 5.971330
+
+epoch: 7, batch: 3600, train loss: 21.366635
+
+epoch: 7, batch: 3700, train loss: 18.639294
+
+epoch: 7, batch: 3800, train loss: 23.078412
+
+epoch: 7, batch: 3900, train loss: 16.851297
+
+epoch: 7, batch: 4000, train loss: 19.056166
+
+epoch: 7, batch: 4100, train loss: 20.841139
+
+epoch: 7, batch: 4200, train loss: 2.633852
+
+epoch: 7, batch: 4300, train loss: 17.180940
+
+epoch: 7, batch: 4400, train loss: 12.845242
+
+epoch: 7, batch: 4500, train loss: 23.972592
+
+epoch: 7, batch: 4600, train loss: 18.136783
+
+epoch: 7, batch: 4700, train loss: 12.705424
+
+epoch: 7, batch: 4800, train loss: 9.378393
+
+epoch: 7, batch: 4900, train loss: 20.186411
+
+epoch: 7, batch: 5000, train loss: 23.655013
+
+epoch: 7, batch: 5100, train loss: 25.234953
+
+epoch: 7, batch: 5200, train loss: 2.362908
+
+epoch: 7, batch: 5300, train loss: 6.817529
+
+epoch: 7, batch: 5400, train loss: 23.054471
+
+epoch: 7, batch: 5500, train loss: 26.987906
+
+epoch: 7, batch: 5600, train loss: 11.988911
+
+epoch: 7, batch: 5700, train loss: 19.252734
+
+
+----------Begin test...
+--------Time: 20542.857850 sec, epoch: 7, train loss: 17.809721, test loss: 37.933075
+save parameters at ./checkpoints/libri/epoch_7
+epoch: 8, batch: 0, train loss: 15.459946
+
+epoch: 8, batch: 100, train loss: 18.649756
+
+epoch: 8, batch: 200, train loss: 19.233768
+
+epoch: 8, batch: 300, train loss: 18.288243
+
+epoch: 8, batch: 400, train loss: 6.216633
+
+epoch: 8, batch: 500, train loss: 14.317006
+
+epoch: 8, batch: 600, train loss: 26.739822
+
+epoch: 8, batch: 700, train loss: 23.561580
+
+epoch: 8, batch: 800, train loss: 19.439444
+
+epoch: 8, batch: 900, train loss: 14.213210
+
+epoch: 8, batch: 1000, train loss: 17.291917
+
+epoch: 8, batch: 1100, train loss: 15.652231
+
+epoch: 8, batch: 1200, train loss: 14.319016
+
+epoch: 8, batch: 1300, train loss: 3.000903
+
+epoch: 8, batch: 1400, train loss: 23.330652
+
+epoch: 8, batch: 1500, train loss: 20.807411
+
+epoch: 8, batch: 1600, train loss: 1.474794
+
+epoch: 8, batch: 1700, train loss: 31.505127
+
+epoch: 8, batch: 1800, train loss: 25.101682
+
+epoch: 8, batch: 1900, train loss: 12.091494
+
+epoch: 8, batch: 2000, train loss: 23.586629
+
+epoch: 8, batch: 2100, train loss: 17.943027
+
+epoch: 8, batch: 2200, train loss: 29.093326
+
+epoch: 8, batch: 2300, train loss: 28.391266
+
+epoch: 8, batch: 2400, train loss: 18.950284
+
+epoch: 8, batch: 2500, train loss: 9.450810
+
+epoch: 8, batch: 2600, train loss: 20.978627
+
+epoch: 8, batch: 2700, train loss: 17.057919
+
+epoch: 8, batch: 2800, train loss: 5.807086
+
+epoch: 8, batch: 2900, train loss: 10.206387
+
+epoch: 8, batch: 3000, train loss: 16.944699
+
+epoch: 8, batch: 3100, train loss: 17.919008
+
+epoch: 8, batch: 3200, train loss: 21.357130
+
+epoch: 8, batch: 3300, train loss: 20.809441
+
+epoch: 8, batch: 3400, train loss: 11.077779
+
+epoch: 8, batch: 3500, train loss: 7.219591
+
+epoch: 8, batch: 3600, train loss: 8.627646
+
+epoch: 8, batch: 3700, train loss: 14.659294
+
+epoch: 8, batch: 3800, train loss: 15.133438
+
+epoch: 8, batch: 3900, train loss: 20.594537
+
+epoch: 8, batch: 4000, train loss: 15.822162
+
+epoch: 8, batch: 4100, train loss: 24.816722
+
+epoch: 8, batch: 4200, train loss: 13.606308
+
+epoch: 8, batch: 4300, train loss: 28.062445
+
+epoch: 8, batch: 4400, train loss: 24.753720
+
+epoch: 8, batch: 4500, train loss: 8.945982
+
+epoch: 8, batch: 4600, train loss: 21.935985
+
+epoch: 8, batch: 4700, train loss: 24.297092
+
+epoch: 8, batch: 4800, train loss: 25.337938
+
+epoch: 8, batch: 4900, train loss: 23.466153
+
+epoch: 8, batch: 5000, train loss: 35.934552
+
+epoch: 8, batch: 5100, train loss: 15.671814
+
+epoch: 8, batch: 5200, train loss: 22.232175
+
+epoch: 8, batch: 5300, train loss: 2.195047
+
+epoch: 8, batch: 5400, train loss: 27.052881
+
+epoch: 8, batch: 5500, train loss: 17.326416
+
+epoch: 8, batch: 5600, train loss: 15.431660
+
+epoch: 8, batch: 5700, train loss: 23.891766
+
+
+----------Begin test...
+--------Time: 20545.012410 sec, epoch: 8, train loss: 18.056608, test loss: 37.980789
+save parameters at ./checkpoints/libri/epoch_8
+epoch: 9, batch: 0, train loss: 35.101221
+
+epoch: 9, batch: 100, train loss: 15.816125
+
+epoch: 9, batch: 200, train loss: 34.329773
+
+epoch: 9, batch: 300, train loss: 20.280865
+
+epoch: 9, batch: 400, train loss: 2.339195
+
+epoch: 9, batch: 500, train loss: 26.529483
+
+epoch: 9, batch: 600, train loss: 3.269214
+
+epoch: 9, batch: 700, train loss: 17.246886
+
+epoch: 9, batch: 800, train loss: 20.907716
+
+epoch: 9, batch: 900, train loss: 29.686835
+
+epoch: 9, batch: 1000, train loss: 29.540198
+
+epoch: 9, batch: 1100, train loss: 29.550192
+
+epoch: 9, batch: 1200, train loss: 22.095244
+
+epoch: 9, batch: 1300, train loss: 17.546330
+
+epoch: 9, batch: 1400, train loss: 30.411392
+
+epoch: 9, batch: 1500, train loss: 8.075323
+
+epoch: 9, batch: 1600, train loss: 19.270468
+
+epoch: 9, batch: 1700, train loss: 26.190576
+
+epoch: 9, batch: 1800, train loss: 20.066008
+
+epoch: 9, batch: 1900, train loss: 0.359327
+
+epoch: 9, batch: 2000, train loss: 30.388232
+
+epoch: 9, batch: 2100, train loss: 8.574457
+
+epoch: 9, batch: 2200, train loss: 15.332135
+
+epoch: 9, batch: 2300, train loss: 23.950453
+
+epoch: 9, batch: 2400, train loss: 11.222940
+
+epoch: 9, batch: 2500, train loss: 1.552035
+
+epoch: 9, batch: 2600, train loss: 14.455927
+
+epoch: 9, batch: 2700, train loss: 15.303838
+
+epoch: 9, batch: 2800, train loss: 14.111342
+
+epoch: 9, batch: 2900, train loss: 10.655508
+
+epoch: 9, batch: 3000, train loss: 18.755664
+
+epoch: 9, batch: 3100, train loss: 7.958075
+
+epoch: 9, batch: 3200, train loss: 14.400902
+
+epoch: 9, batch: 3300, train loss: 23.937430
+
+epoch: 9, batch: 3400, train loss: 16.014116
+
+epoch: 9, batch: 3500, train loss: 29.514514
+
+epoch: 9, batch: 3600, train loss: 33.585306
+
+epoch: 9, batch: 3700, train loss: 21.297079
+
+epoch: 9, batch: 3800, train loss: 21.041208
+
+epoch: 9, batch: 3900, train loss: 9.427267
+
+epoch: 9, batch: 4000, train loss: 24.586688
+
+epoch: 9, batch: 4100, train loss: 19.652205
+
+epoch: 9, batch: 4200, train loss: 3.053006
+
+epoch: 9, batch: 4300, train loss: 17.928210
+
+epoch: 9, batch: 4400, train loss: 14.952469
+
+epoch: 9, batch: 4500, train loss: 8.227721
+
+epoch: 9, batch: 4600, train loss: 25.474298
+
+epoch: 9, batch: 4700, train loss: 18.128297
+
+epoch: 9, batch: 4800, train loss: 18.478061
+
+epoch: 9, batch: 4900, train loss: 17.995659
+
+epoch: 9, batch: 5000, train loss: 2.263084
+
+epoch: 9, batch: 5100, train loss: 18.168388
+
+epoch: 9, batch: 5200, train loss: 21.248682
+
+epoch: 9, batch: 5300, train loss: 23.826460
+
+epoch: 9, batch: 5400, train loss: 29.273505
+
+epoch: 9, batch: 5500, train loss: 24.594307
+
+epoch: 9, batch: 5600, train loss: 16.139824
+
+epoch: 9, batch: 5700, train loss: 15.971750
+
+
+----------Begin test...
+--------Time: 20535.584526 sec, epoch: 9, train loss: 18.449198, test loss: 38.027692
+save parameters at ./checkpoints/libri/epoch_9
+epoch: 10, batch: 0, train loss: 11.235036
+
+epoch: 10, batch: 100, train loss: 13.497523
+
+epoch: 10, batch: 200, train loss: 27.779346
+
+epoch: 10, batch: 300, train loss: 16.580542
+
+epoch: 10, batch: 400, train loss: 14.800821
+
+epoch: 10, batch: 500, train loss: 24.204507
+
+epoch: 10, batch: 600, train loss: 19.637630
+
+epoch: 10, batch: 700, train loss: 17.328500
+
+epoch: 10, batch: 800, train loss: 35.103250
+
+epoch: 10, batch: 900, train loss: 18.482629
+
+epoch: 10, batch: 1000, train loss: 23.834680
+
+epoch: 10, batch: 1100, train loss: 15.191359
+
+epoch: 10, batch: 1200, train loss: 14.648969
+
+epoch: 10, batch: 1300, train loss: 13.307806
+
+epoch: 10, batch: 1400, train loss: 17.848520
+
+epoch: 10, batch: 1500, train loss: 26.715628
+
+epoch: 10, batch: 1600, train loss: 18.921173
+
+epoch: 10, batch: 1700, train loss: 24.937900
+
+epoch: 10, batch: 1800, train loss: 22.120694
+
+epoch: 10, batch: 1900, train loss: 21.463614
+
+epoch: 10, batch: 2000, train loss: 18.085548
+
+epoch: 10, batch: 2100, train loss: 45.033417
+
+epoch: 10, batch: 2200, train loss: 20.678534
+
+epoch: 10, batch: 2300, train loss: 24.072148
+
+epoch: 10, batch: 2400, train loss: 22.220923
+
+epoch: 10, batch: 2500, train loss: 22.267776
+
+epoch: 10, batch: 2600, train loss: 21.655025
+
+epoch: 10, batch: 2700, train loss: 19.467755
+
+epoch: 10, batch: 2800, train loss: 13.875595
+
+epoch: 10, batch: 2900, train loss: 23.294994
+
+epoch: 10, batch: 3000, train loss: 35.380859
+
+epoch: 10, batch: 3100, train loss: 11.815487
+
+epoch: 10, batch: 3200, train loss: 16.575912
+
+epoch: 10, batch: 3300, train loss: 11.361638
+
+epoch: 10, batch: 3400, train loss: 15.817760
+
+epoch: 10, batch: 3500, train loss: 18.672681
+
+epoch: 10, batch: 3600, train loss: 8.689682
+
+epoch: 10, batch: 3700, train loss: 19.312404
+
+epoch: 10, batch: 3800, train loss: 19.601804
+
+epoch: 10, batch: 3900, train loss: 9.601657
+
+epoch: 10, batch: 4000, train loss: 13.609302
+
+epoch: 10, batch: 4100, train loss: 11.647548
+
+epoch: 10, batch: 4200, train loss: 37.963602
+
+epoch: 10, batch: 4300, train loss: 9.735136
+
+epoch: 10, batch: 4400, train loss: 5.136114
+
+epoch: 10, batch: 4500, train loss: 18.981810
+
+epoch: 10, batch: 4600, train loss: 9.118111
+
+epoch: 10, batch: 4700, train loss: 39.492957
+
+epoch: 10, batch: 4800, train loss: 21.788345
+
+epoch: 10, batch: 4900, train loss: 17.338870
+
+epoch: 10, batch: 5000, train loss: 26.336298
+
+epoch: 10, batch: 5100, train loss: 27.479358
+
+epoch: 10, batch: 5200, train loss: 25.306563
+
+epoch: 10, batch: 5300, train loss: 23.155324
+
+epoch: 10, batch: 5400, train loss: 14.461743
+
+epoch: 10, batch: 5500, train loss: 21.680061
+
+epoch: 10, batch: 5600, train loss: 25.344658
+
+epoch: 10, batch: 5700, train loss: 13.708403
+
+
+----------Begin test...
+--------Time: 20556.723110 sec, epoch: 10, train loss: 19.955275, test loss: 37.903629
+save parameters at ./checkpoints/libri/epoch_10
+epoch: 11, batch: 0, train loss: 15.626103
+
+epoch: 11, batch: 100, train loss: 12.334834
+
+epoch: 11, batch: 200, train loss: 13.768636
+
+epoch: 11, batch: 300, train loss: 22.262344
+
+epoch: 11, batch: 400, train loss: 3.210452
+
+epoch: 11, batch: 500, train loss: 18.954213
+
+epoch: 11, batch: 600, train loss: 23.593484
+
+epoch: 11, batch: 700, train loss: 30.968286
+
+epoch: 11, batch: 800, train loss: 27.573846
+
+epoch: 11, batch: 900, train loss: 14.836662
+
+epoch: 11, batch: 1000, train loss: 16.602293
+
+epoch: 11, batch: 1100, train loss: 16.869351
+
+epoch: 11, batch: 1200, train loss: 17.640213
+
+epoch: 11, batch: 1300, train loss: 12.246202
+
+epoch: 11, batch: 1400, train loss: 13.258136
+
+epoch: 11, batch: 1500, train loss: 18.739868
+
+epoch: 11, batch: 1600, train loss: 27.230942
+
+epoch: 11, batch: 1700, train loss: 13.287003
+
+epoch: 11, batch: 1800, train loss: 20.344923
+
+epoch: 11, batch: 1900, train loss: 4.772380
+
+epoch: 11, batch: 2000, train loss: 10.153335
+
+epoch: 11, batch: 2100, train loss: 17.676773
+
+epoch: 11, batch: 2200, train loss: 21.110840
+
+epoch: 11, batch: 2300, train loss: 29.374850
+
+epoch: 11, batch: 2400, train loss: 15.122133
+
+epoch: 11, batch: 2500, train loss: 11.413812
+
+epoch: 11, batch: 2600, train loss: 20.724716
+
+epoch: 11, batch: 2700, train loss: 25.770609
+
+epoch: 11, batch: 2800, train loss: 16.464658
+
+epoch: 11, batch: 2900, train loss: 19.040947
+
+epoch: 11, batch: 3000, train loss: 19.597678
+
+epoch: 11, batch: 3100, train loss: 37.009628
+
+epoch: 11, batch: 3200, train loss: 16.898735
+
+epoch: 11, batch: 3300, train loss: 17.666566
+
+epoch: 11, batch: 3400, train loss: 19.086591
+
+epoch: 11, batch: 3500, train loss: 4.458347
+
+epoch: 11, batch: 3600, train loss: 14.691455
+
+epoch: 11, batch: 3700, train loss: 19.981216
+
+epoch: 11, batch: 3800, train loss: 15.473174
+
+epoch: 11, batch: 3900, train loss: 12.524873
+
+epoch: 11, batch: 4000, train loss: 27.930396
+
+epoch: 11, batch: 4100, train loss: 23.043915
+
+epoch: 11, batch: 4200, train loss: 12.910266
+
+epoch: 11, batch: 4300, train loss: 3.320543
+
+epoch: 11, batch: 4400, train loss: 7.955018
+
+epoch: 11, batch: 4500, train loss: 20.902049
+
+epoch: 11, batch: 4600, train loss: 26.204144
+
+epoch: 11, batch: 4700, train loss: 9.933289
+
+epoch: 11, batch: 4800, train loss: 12.607474
+
+epoch: 11, batch: 4900, train loss: 19.650964
+
+epoch: 11, batch: 5000, train loss: 1.358416
+
+epoch: 11, batch: 5100, train loss: 14.073776
+
+epoch: 11, batch: 5200, train loss: 35.278094
+
+epoch: 11, batch: 5300, train loss: 28.732425
+
+epoch: 11, batch: 5400, train loss: 12.772169
+
+epoch: 11, batch: 5500, train loss: 1.827162
+
+epoch: 11, batch: 5600, train loss: 16.655649
+
+epoch: 11, batch: 5700, train loss: 18.859175
+
+
+----------Begin test...
+--------Time: 20536.401243 sec, epoch: 11, train loss: 17.282345, test loss: 37.929181
+save parameters at ./checkpoints/libri/epoch_11
+epoch: 12, batch: 0, train loss: 15.303384
+
+epoch: 12, batch: 100, train loss: 11.525555
+
+epoch: 12, batch: 200, train loss: 2.652500
+
+epoch: 12, batch: 300, train loss: 3.560943
+
+epoch: 12, batch: 400, train loss: 29.610516
+
+epoch: 12, batch: 500, train loss: 8.319095
+
+epoch: 12, batch: 600, train loss: 21.938480
+
+epoch: 12, batch: 700, train loss: 21.184158
+
+epoch: 12, batch: 800, train loss: 43.757224
+
+epoch: 12, batch: 900, train loss: 18.634796
+
+epoch: 12, batch: 1000, train loss: 16.569057
+
+epoch: 12, batch: 1100, train loss: 2.871919
+
+epoch: 12, batch: 1200, train loss: 11.702103
+
+epoch: 12, batch: 1300, train loss: 21.575752
+
+epoch: 12, batch: 1400, train loss: 16.619246
+
+epoch: 12, batch: 1500, train loss: 17.942429
+
+epoch: 12, batch: 1600, train loss: 12.766883
+
+epoch: 12, batch: 1700, train loss: 14.572032
+
+epoch: 12, batch: 1800, train loss: 29.020499
+
+epoch: 12, batch: 1900, train loss: 19.658141
+
+epoch: 12, batch: 2000, train loss: 19.216219
+
+epoch: 12, batch: 2100, train loss: 26.998230
+
+epoch: 12, batch: 2200, train loss: 16.040350
+
+epoch: 12, batch: 2300, train loss: 12.613341
+
+epoch: 12, batch: 2400, train loss: 2.708576
+
+epoch: 12, batch: 2500, train loss: 12.453104
+
+epoch: 12, batch: 2600, train loss: 15.930743
+
+epoch: 12, batch: 2700, train loss: 15.364668
+
+epoch: 12, batch: 2800, train loss: 6.620042
+
+epoch: 12, batch: 2900, train loss: 22.433307
+
+epoch: 12, batch: 3000, train loss: 17.230518
+
+epoch: 12, batch: 3100, train loss: 24.228169
+
+epoch: 12, batch: 3200, train loss: 20.595541
+
+epoch: 12, batch: 3300, train loss: 33.187000
+
+epoch: 12, batch: 3400, train loss: 5.272788
+
+epoch: 12, batch: 3500, train loss: 22.204987
+
+epoch: 12, batch: 3600, train loss: 1.925391
+
+epoch: 12, batch: 3700, train loss: 13.696916
+
+epoch: 12, batch: 3800, train loss: 8.909603
+
+epoch: 12, batch: 3900, train loss: 27.262872
+
+epoch: 12, batch: 4000, train loss: 21.812524
+
+epoch: 12, batch: 4100, train loss: 22.373816
+
+epoch: 12, batch: 4200, train loss: 20.606699
+
+epoch: 12, batch: 4300, train loss: 2.361905
+
+epoch: 12, batch: 4400, train loss: 15.733090
+
+epoch: 12, batch: 4500, train loss: 22.422192
+
+epoch: 12, batch: 4600, train loss: 7.025460
+
+epoch: 12, batch: 4700, train loss: 22.872789
+
+epoch: 12, batch: 4800, train loss: 20.125850
+
+epoch: 12, batch: 4900, train loss: 11.858405
+
+epoch: 12, batch: 5000, train loss: 19.988641
+
+epoch: 12, batch: 5100, train loss: 19.131810
+
+epoch: 12, batch: 5200, train loss: 20.347430
+
+epoch: 12, batch: 5300, train loss: 25.769019
+
+epoch: 12, batch: 5400, train loss: 12.713164
+
+epoch: 12, batch: 5500, train loss: 16.797223
+
+epoch: 12, batch: 5600, train loss: 22.036360
+
+epoch: 12, batch: 5700, train loss: 7.103407
+
+
+----------Begin test...
+--------Time: 20544.467610 sec, epoch: 12, train loss: 16.823395, test loss: 38.041019
+save parameters at ./checkpoints/libri/epoch_12
+epoch: 13, batch: 0, train loss: 24.650987
+
+epoch: 13, batch: 100, train loss: 17.994243
+
+epoch: 13, batch: 200, train loss: 13.923843
+
+epoch: 13, batch: 300, train loss: 19.500549
+
+epoch: 13, batch: 400, train loss: 19.643437
+
+epoch: 13, batch: 500, train loss: 20.065945
+
+epoch: 13, batch: 600, train loss: 22.101636
+
+epoch: 13, batch: 700, train loss: 10.478218
+
+epoch: 13, batch: 800, train loss: 29.873245
+
+epoch: 13, batch: 900, train loss: 24.335205
+
+epoch: 13, batch: 1000, train loss: 10.156297
+
+epoch: 13, batch: 1100, train loss: 19.587288
+
+epoch: 13, batch: 1200, train loss: 21.080807
+
+epoch: 13, batch: 1300, train loss: 18.826926
+
+epoch: 13, batch: 1400, train loss: 30.698160
+
+epoch: 13, batch: 1500, train loss: 21.992320
+
+epoch: 13, batch: 1600, train loss: 19.861475
+
+epoch: 13, batch: 1700, train loss: 28.257040
+
+epoch: 13, batch: 1800, train loss: 17.215118
+
+epoch: 13, batch: 1900, train loss: 13.943913
+
+epoch: 13, batch: 2000, train loss: 16.530104
+
+epoch: 13, batch: 2100, train loss: 18.171333
+
+epoch: 13, batch: 2200, train loss: 24.114488
+
+epoch: 13, batch: 2300, train loss: 16.019214
+
+epoch: 13, batch: 2400, train loss: 30.120059
+
+epoch: 13, batch: 2500, train loss: 24.043517
+
+epoch: 13, batch: 2600, train loss: 14.491907
+
+epoch: 13, batch: 2700, train loss: 17.107368
+
+epoch: 13, batch: 2800, train loss: 23.280438
+
+epoch: 13, batch: 2900, train loss: 22.590404
+
+epoch: 13, batch: 3000, train loss: 28.579712
+
+epoch: 13, batch: 3100, train loss: 16.752069
+
+epoch: 13, batch: 3200, train loss: 25.878601
+
+epoch: 13, batch: 3300, train loss: 13.728003
+
+epoch: 13, batch: 3400, train loss: 16.949297
+
+epoch: 13, batch: 3500, train loss: 14.766365
+
+epoch: 13, batch: 3600, train loss: 19.369540
+
+epoch: 13, batch: 3700, train loss: 25.385138
+
+epoch: 13, batch: 3800, train loss: 8.771724
+
+epoch: 13, batch: 3900, train loss: 28.665460
+
+epoch: 13, batch: 4000, train loss: 24.124715
+
+epoch: 13, batch: 4100, train loss: 29.899750
+
+epoch: 13, batch: 4200, train loss: 2.051682
+
+epoch: 13, batch: 4300, train loss: 17.398752
+
+epoch: 13, batch: 4400, train loss: 31.183575
+
+epoch: 13, batch: 4500, train loss: 17.760597
+
+epoch: 13, batch: 4600, train loss: 15.883749
+
+epoch: 13, batch: 4700, train loss: 27.207983
+
+epoch: 13, batch: 4800, train loss: 34.090094
+
+epoch: 13, batch: 4900, train loss: 14.821899
+
+epoch: 13, batch: 5000, train loss: 23.682831
+
+epoch: 13, batch: 5100, train loss: 9.741612
+
+epoch: 13, batch: 5200, train loss: 0.675949
+
+epoch: 13, batch: 5300, train loss: 41.336121
+
+epoch: 13, batch: 5400, train loss: 11.040617
+
+epoch: 13, batch: 5500, train loss: 26.468140
+
+epoch: 13, batch: 5600, train loss: 31.285352
+
+epoch: 13, batch: 5700, train loss: 12.253825
+
+
+----------Begin test...
+--------Time: 20548.734012 sec, epoch: 13, train loss: 20.351873, test loss: 38.032230
+save parameters at ./checkpoints/libri/epoch_13
+epoch: 14, batch: 0, train loss: 42.756561
+
+epoch: 14, batch: 100, train loss: 22.106242
+
+epoch: 14, batch: 200, train loss: 30.114798
+
+epoch: 14, batch: 300, train loss: 19.361302
+
+epoch: 14, batch: 400, train loss: 39.003165
+
+epoch: 14, batch: 500, train loss: 39.034659
+
+epoch: 14, batch: 600, train loss: 17.667465
+
+epoch: 14, batch: 700, train loss: 24.072971
+
+epoch: 14, batch: 800, train loss: 13.165671
+
+epoch: 14, batch: 900, train loss: 34.452591
+
+epoch: 14, batch: 1000, train loss: 17.273706
+
+epoch: 14, batch: 1100, train loss: 38.220279
+
+epoch: 14, batch: 1200, train loss: 28.358148
+
+epoch: 14, batch: 1300, train loss: 29.826080
+
+epoch: 14, batch: 1400, train loss: 25.401064
+
+epoch: 14, batch: 1500, train loss: 18.279453
+
+epoch: 14, batch: 1600, train loss: 10.566190
+
+epoch: 14, batch: 1700, train loss: 26.153156
+
+epoch: 14, batch: 1800, train loss: 25.049756
+
+epoch: 14, batch: 1900, train loss: 16.226825
+
+epoch: 14, batch: 2000, train loss: 20.701430
+
+epoch: 14, batch: 2100, train loss: 26.595605
+
+epoch: 14, batch: 2200, train loss: 24.619341
+
+epoch: 14, batch: 2300, train loss: 32.119855
+
+epoch: 14, batch: 2400, train loss: 38.148196
+
+epoch: 14, batch: 2500, train loss: 15.774107
+
+epoch: 14, batch: 2600, train loss: 11.827380
+
+epoch: 14, batch: 2700, train loss: 16.694592
+
+epoch: 14, batch: 2800, train loss: 19.513040
+
+epoch: 14, batch: 2900, train loss: 19.985251
+
+epoch: 14, batch: 3000, train loss: 13.235539
+
+epoch: 14, batch: 3100, train loss: 28.898709
+
+epoch: 14, batch: 3200, train loss: 15.572751
+
+epoch: 14, batch: 3300, train loss: 21.360408
+
+epoch: 14, batch: 3400, train loss: 50.400012
+
+epoch: 14, batch: 3500, train loss: 27.345050
+
+epoch: 14, batch: 3600, train loss: 22.181439
+
+epoch: 14, batch: 3700, train loss: 5.371507
+
+epoch: 14, batch: 3800, train loss: 6.327678
+
+epoch: 14, batch: 3900, train loss: 14.910864
+
+epoch: 14, batch: 4000, train loss: 42.890860
+
+epoch: 14, batch: 4100, train loss: 28.513696
+
+epoch: 14, batch: 4200, train loss: 16.817874
+
+epoch: 14, batch: 4300, train loss: 18.488792
+
+epoch: 14, batch: 4400, train loss: 28.596985
+
+epoch: 14, batch: 4500, train loss: 21.684644
+
+epoch: 14, batch: 4600, train loss: 21.205568
+
+epoch: 14, batch: 4700, train loss: 17.748059
+
+epoch: 14, batch: 4800, train loss: 27.168008
+
+epoch: 14, batch: 4900, train loss: 19.807315
+
+epoch: 14, batch: 5000, train loss: 22.963316
+
+epoch: 14, batch: 5100, train loss: 28.948999
+
+epoch: 14, batch: 5200, train loss: 22.765668
+
+epoch: 14, batch: 5300, train loss: 17.266397
+
+epoch: 14, batch: 5400, train loss: 20.294957
+
+epoch: 14, batch: 5500, train loss: 35.798880
+
+epoch: 14, batch: 5600, train loss: 8.193858
+
+epoch: 14, batch: 5700, train loss: 19.366115
+
+
+----------Begin test...
+--------Time: 20558.657376 sec, epoch: 14, train loss: 23.572289, test loss: 37.990195
+save parameters at ./checkpoints/libri/epoch_14
+epoch: 15, batch: 0, train loss: 22.504991
+
+epoch: 15, batch: 100, train loss: 22.609348
+
+epoch: 15, batch: 200, train loss: 22.787209
+
+epoch: 15, batch: 300, train loss: 6.905185
+
+epoch: 15, batch: 400, train loss: 9.286555
+
+epoch: 15, batch: 500, train loss: 0.921364
+
+epoch: 15, batch: 600, train loss: 27.606915
+
+epoch: 15, batch: 700, train loss: 16.142859
+
+epoch: 15, batch: 800, train loss: 25.380396
+
+epoch: 15, batch: 900, train loss: 21.493971
+
+epoch: 15, batch: 1000, train loss: 5.637804
+
+epoch: 15, batch: 1100, train loss: 7.549503
+
+epoch: 15, batch: 1200, train loss: 19.826711
+
+epoch: 15, batch: 1300, train loss: 15.158704
+
+epoch: 15, batch: 1400, train loss: 15.813589
+
+epoch: 15, batch: 1500, train loss: 17.403485
+
+epoch: 15, batch: 1600, train loss: 22.521614
+
+epoch: 15, batch: 1700, train loss: 17.110162
+
+epoch: 15, batch: 1800, train loss: 13.435318
+
+epoch: 15, batch: 1900, train loss: 17.187886
+
+epoch: 15, batch: 2000, train loss: 29.882068
+
+epoch: 15, batch: 2100, train loss: 3.966063
+
+epoch: 15, batch: 2200, train loss: 20.635092
+
+epoch: 15, batch: 2300, train loss: 35.913959
+
+epoch: 15, batch: 2400, train loss: 15.561185
+
+epoch: 15, batch: 2500, train loss: 33.139685
+
+epoch: 15, batch: 2600, train loss: 22.927173
+
+epoch: 15, batch: 2700, train loss: 24.761087
+
+epoch: 15, batch: 2800, train loss: 21.330296
+
+epoch: 15, batch: 2900, train loss: 37.789017
+
+epoch: 15, batch: 3000, train loss: 62.625458
+
+epoch: 15, batch: 3100, train loss: 24.251151
+
+epoch: 15, batch: 3200, train loss: 28.768561
+
+epoch: 15, batch: 3300, train loss: 19.089282
+
+epoch: 15, batch: 3400, train loss: 47.655591
+
+epoch: 15, batch: 3500, train loss: 14.482391
+
+epoch: 15, batch: 3600, train loss: 14.077217
+
+epoch: 15, batch: 3700, train loss: 15.555882
+
+epoch: 15, batch: 3800, train loss: 32.495395
+
+epoch: 15, batch: 3900, train loss: 23.050002
+
+epoch: 15, batch: 4000, train loss: 19.186194
+
+epoch: 15, batch: 4100, train loss: 14.066290
+
+epoch: 15, batch: 4200, train loss: 10.278162
+
+epoch: 15, batch: 4300, train loss: 27.448798
+
+epoch: 15, batch: 4400, train loss: 5.484635
+
+epoch: 15, batch: 4500, train loss: 32.408008
+
+epoch: 15, batch: 4600, train loss: 26.189639
+
+epoch: 15, batch: 4700, train loss: 21.425827
+
+epoch: 15, batch: 4800, train loss: 13.569167
+
+epoch: 15, batch: 4900, train loss: 11.690953
+
+epoch: 15, batch: 5000, train loss: 17.274991
+
+epoch: 15, batch: 5100, train loss: 23.600157
+
+epoch: 15, batch: 5200, train loss: 17.772711
+
+epoch: 15, batch: 5300, train loss: 10.019955
+
+epoch: 15, batch: 5400, train loss: 18.202412
+
+epoch: 15, batch: 5500, train loss: 28.176157
+
+epoch: 15, batch: 5600, train loss: 23.997589
+
+epoch: 15, batch: 5700, train loss: 24.808472
+
+
+----------Begin test...
+--------Time: 20553.016840 sec, epoch: 15, train loss: 20.704142, test loss: 38.167783
+save parameters at ./checkpoints/libri/epoch_15
+epoch: 16, batch: 0, train loss: 9.080324
+
+epoch: 16, batch: 100, train loss: 17.399792
+
+epoch: 16, batch: 200, train loss: 10.116071
+
+epoch: 16, batch: 300, train loss: 22.239723
+
+epoch: 16, batch: 400, train loss: 15.009419
+
+epoch: 16, batch: 500, train loss: 23.790027
+
+epoch: 16, batch: 600, train loss: 27.178424
+
+epoch: 16, batch: 700, train loss: 21.717978
+
+epoch: 16, batch: 800, train loss: 20.667340
+
+epoch: 16, batch: 900, train loss: 27.529102
+
+epoch: 16, batch: 1000, train loss: 24.390483
+
+epoch: 16, batch: 1100, train loss: 3.538740
+
+epoch: 16, batch: 1200, train loss: 13.477440
+
+epoch: 16, batch: 1300, train loss: 26.392938
+
+epoch: 16, batch: 1400, train loss: 27.147141
+
+epoch: 16, batch: 1500, train loss: 26.759195
+
+epoch: 16, batch: 1600, train loss: 9.270763
+
+epoch: 16, batch: 1700, train loss: 39.405731
+
+epoch: 16, batch: 1800, train loss: 12.335083
+
+epoch: 16, batch: 1900, train loss: 30.466281
+
+epoch: 16, batch: 2000, train loss: 26.285278
+
+epoch: 16, batch: 2100, train loss: 24.412384
+
+epoch: 16, batch: 2200, train loss: 21.623596
+
+epoch: 16, batch: 2300, train loss: 45.573257
+
+epoch: 16, batch: 2400, train loss: 54.196033
+
+epoch: 16, batch: 2500, train loss: 2.957417
+
+epoch: 16, batch: 2600, train loss: 31.446820
+
+epoch: 16, batch: 2700, train loss: 15.951004
+
+epoch: 16, batch: 2800, train loss: 13.913440
+
+epoch: 16, batch: 2900, train loss: 20.167462
+
+epoch: 16, batch: 3000, train loss: 14.818672
+
+epoch: 16, batch: 3100, train loss: 26.252957
+
+epoch: 16, batch: 3200, train loss: 19.914792
+
+epoch: 16, batch: 3300, train loss: 5.557745
+
+epoch: 16, batch: 3400, train loss: 26.663232
+
+epoch: 16, batch: 3500, train loss: 20.462738
+
+epoch: 16, batch: 3600, train loss: 18.552568
+
+epoch: 16, batch: 3700, train loss: 12.634592
+
+epoch: 16, batch: 3800, train loss: 26.237128
+
+epoch: 16, batch: 3900, train loss: 19.814203
+
+epoch: 16, batch: 4000, train loss: 24.655411
+
+epoch: 16, batch: 4100, train loss: 13.837323
+
+epoch: 16, batch: 4200, train loss: 52.547028
+
+epoch: 16, batch: 4300, train loss: 24.209616
+
+epoch: 16, batch: 4400, train loss: 16.228171
+
+epoch: 16, batch: 4500, train loss: 23.611028
+
+epoch: 16, batch: 4600, train loss: 28.101529
+
+epoch: 16, batch: 4700, train loss: 18.963766
+
+epoch: 16, batch: 4800, train loss: 23.636194
+
+epoch: 16, batch: 4900, train loss: 22.303014
+
+epoch: 16, batch: 5000, train loss: 17.757780
+
+epoch: 16, batch: 5100, train loss: 10.862818
+
+epoch: 16, batch: 5200, train loss: 10.783791
+
+epoch: 16, batch: 5300, train loss: 14.123529
+
+epoch: 16, batch: 5400, train loss: 13.672693
+
+epoch: 16, batch: 5500, train loss: 5.396447
+
+epoch: 16, batch: 5600, train loss: 17.743036
+
+epoch: 16, batch: 5700, train loss: 13.610916
+
+
+----------Begin test...
+--------Time: 20554.434606 sec, epoch: 16, train loss: 20.817097, test loss: 37.990753
+save parameters at ./checkpoints/libri/epoch_16
+epoch: 17, batch: 0, train loss: 9.444366
+
+epoch: 17, batch: 100, train loss: 21.636429
+
+epoch: 17, batch: 200, train loss: 15.957303
+
+epoch: 17, batch: 300, train loss: 21.217509
+
+epoch: 17, batch: 400, train loss: 28.532883
+
+epoch: 17, batch: 500, train loss: 29.775189
+
+epoch: 17, batch: 600, train loss: 29.518619
+
+epoch: 17, batch: 700, train loss: 17.401335
+
+epoch: 17, batch: 800, train loss: 10.829691
+
+epoch: 17, batch: 900, train loss: 22.295876
+
+epoch: 17, batch: 1000, train loss: 36.846078
+
+epoch: 17, batch: 1100, train loss: 19.969635
+
+epoch: 17, batch: 1200, train loss: 10.105537
+
+epoch: 17, batch: 1300, train loss: 20.459492
+
+epoch: 17, batch: 1400, train loss: 20.057753
+
+epoch: 17, batch: 1500, train loss: 23.549599
+
+epoch: 17, batch: 1600, train loss: 8.760463
+
+epoch: 17, batch: 1700, train loss: 1.642949
+
+epoch: 17, batch: 1800, train loss: 15.551561
+
+epoch: 17, batch: 1900, train loss: 13.904219
+
+epoch: 17, batch: 2000, train loss: 31.744415
+
+epoch: 17, batch: 2100, train loss: 3.614758
+
+epoch: 17, batch: 2200, train loss: 19.741412
+
+epoch: 17, batch: 2300, train loss: 16.250220
+
+epoch: 17, batch: 2400, train loss: 26.385892
+
+epoch: 17, batch: 2500, train loss: 38.207407
+
+epoch: 17, batch: 2600, train loss: 18.145618
+
+epoch: 17, batch: 2700, train loss: 33.131403
+
+epoch: 17, batch: 2800, train loss: 26.219830
+
+epoch: 17, batch: 2900, train loss: 0.511807
+
+epoch: 17, batch: 3000, train loss: 31.594302
+
+epoch: 17, batch: 3100, train loss: 20.811324
+
+epoch: 17, batch: 3200, train loss: 24.175485
+
+epoch: 17, batch: 3300, train loss: 29.117432
+
+epoch: 17, batch: 3400, train loss: 17.050699
+
+epoch: 17, batch: 3500, train loss: 9.558356
+
+epoch: 17, batch: 3600, train loss: 17.020241
+
+epoch: 17, batch: 3700, train loss: 15.626028
+
+epoch: 17, batch: 3800, train loss: 25.512163
+
+epoch: 17, batch: 3900, train loss: 10.363970
+
+epoch: 17, batch: 4000, train loss: 23.749464
+
+epoch: 17, batch: 4100, train loss: 40.086703
+
+epoch: 17, batch: 4200, train loss: 24.475815
+
+epoch: 17, batch: 4300, train loss: 10.813412
+
+epoch: 17, batch: 4400, train loss: 12.753010
+
+epoch: 17, batch: 4500, train loss: 29.306375
+
+epoch: 17, batch: 4600, train loss: 26.219394
+
+epoch: 17, batch: 4700, train loss: 22.490810
+
+epoch: 17, batch: 4800, train loss: 29.918896
+
+epoch: 17, batch: 4900, train loss: 14.730307
+
+epoch: 17, batch: 5000, train loss: 10.720361
+
+epoch: 17, batch: 5100, train loss: 9.984726
+
+epoch: 17, batch: 5200, train loss: 19.579405
+
+epoch: 17, batch: 5300, train loss: 25.244876
+
+epoch: 17, batch: 5400, train loss: 11.384840
+
+epoch: 17, batch: 5500, train loss: 24.386633
+
+epoch: 17, batch: 5600, train loss: 16.125307
+
+epoch: 17, batch: 5700, train loss: 22.576663
+
+
+----------Begin test...
+--------Time: 20554.517246 sec, epoch: 17, train loss: 20.117004, test loss: 37.895099
+save parameters at ./checkpoints/libri/epoch_17
+epoch: 18, batch: 0, train loss: 10.425226
+
+epoch: 18, batch: 100, train loss: 11.052583
+
+epoch: 18, batch: 200, train loss: 16.882925
+
+epoch: 18, batch: 300, train loss: 28.636627
+
+epoch: 18, batch: 400, train loss: 21.175830
+
+epoch: 18, batch: 500, train loss: 37.823181
+
+epoch: 18, batch: 600, train loss: 11.517680
+
+epoch: 18, batch: 700, train loss: 20.252950
+
+epoch: 18, batch: 800, train loss: 25.709613
+
+epoch: 18, batch: 900, train loss: 35.013461
+
+epoch: 18, batch: 1000, train loss: 24.732129
+
+epoch: 18, batch: 1100, train loss: 22.740616
+
+epoch: 18, batch: 1200, train loss: 21.688370
+
+epoch: 18, batch: 1300, train loss: 20.060623
+
+epoch: 18, batch: 1400, train loss: 3.153178
+
+epoch: 18, batch: 1500, train loss: 36.637814
+
+epoch: 18, batch: 1600, train loss: 26.577936
+
+epoch: 18, batch: 1700, train loss: 28.150879
+
+epoch: 18, batch: 1800, train loss: 23.106212
+
+epoch: 18, batch: 1900, train loss: 8.342045
+
+epoch: 18, batch: 2000, train loss: 23.785095
+
+epoch: 18, batch: 2100, train loss: 11.707534
+
+epoch: 18, batch: 2200, train loss: 18.295596
+
+epoch: 18, batch: 2300, train loss: 43.860968
+
+epoch: 18, batch: 2400, train loss: 43.513785
+
+epoch: 18, batch: 2500, train loss: 26.046658
+
+epoch: 18, batch: 2600, train loss: 15.533022
+
+epoch: 18, batch: 2700, train loss: 22.984952
+
+epoch: 18, batch: 2800, train loss: 28.390271
+
+epoch: 18, batch: 2900, train loss: 17.431940
+
+epoch: 18, batch: 3000, train loss: 12.670973
+
+epoch: 18, batch: 3100, train loss: 23.249672
+
+epoch: 18, batch: 3200, train loss: 29.962848
+
+epoch: 18, batch: 3300, train loss: 26.939877
+
+epoch: 18, batch: 3400, train loss: 24.035634
+
+epoch: 18, batch: 3500, train loss: 28.219965
+
+epoch: 18, batch: 3600, train loss: 13.417538
+
+epoch: 18, batch: 3700, train loss: 17.087610
+
+epoch: 18, batch: 3800, train loss: 14.118079
+
+epoch: 18, batch: 3900, train loss: 25.278040
+
+epoch: 18, batch: 4000, train loss: 19.930028
+
+epoch: 18, batch: 4100, train loss: 5.478628
+
+epoch: 18, batch: 4200, train loss: 18.472899
+
+epoch: 18, batch: 4300, train loss: 10.350124
+
+epoch: 18, batch: 4400, train loss: 19.813708
+
+epoch: 18, batch: 4500, train loss: 0.336658
+
+epoch: 18, batch: 4600, train loss: 10.440614
+
+epoch: 18, batch: 4700, train loss: 23.141916
+
+epoch: 18, batch: 4800, train loss: 7.907562
+
+epoch: 18, batch: 4900, train loss: 10.593562
+
+epoch: 18, batch: 5000, train loss: 13.719286
+
+epoch: 18, batch: 5100, train loss: 42.339716
+
+epoch: 18, batch: 5200, train loss: 14.784947
+
+epoch: 18, batch: 5300, train loss: 31.325226
+
+epoch: 18, batch: 5400, train loss: 23.264648
+
+epoch: 18, batch: 5500, train loss: 22.176138
+
+epoch: 18, batch: 5600, train loss: 22.799612
+
+epoch: 18, batch: 5700, train loss: 1.464699
+
+
+----------Begin test...
+--------Time: 20561.100218 sec, epoch: 18, train loss: 20.664654, test loss: 37.948349
+save parameters at ./checkpoints/libri/epoch_18
+epoch: 19, batch: 0, train loss: 7.232626
+
+epoch: 19, batch: 100, train loss: 19.344618
+
+epoch: 19, batch: 200, train loss: 13.571359
+
+epoch: 19, batch: 300, train loss: 38.506653
+
+epoch: 19, batch: 400, train loss: 12.044553
+
+epoch: 19, batch: 500, train loss: 29.527087
+
+epoch: 19, batch: 600, train loss: 19.175352
+
+epoch: 19, batch: 700, train loss: 21.711124
+
+epoch: 19, batch: 800, train loss: 12.055532
+
+epoch: 19, batch: 900, train loss: 26.737457
+
+epoch: 19, batch: 1000, train loss: 18.165109
+
+epoch: 19, batch: 1100, train loss: 22.930220
+
+epoch: 19, batch: 1200, train loss: 17.355121
+
+epoch: 19, batch: 1300, train loss: 17.526364
+
+epoch: 19, batch: 1400, train loss: 13.846573
+
+epoch: 19, batch: 1500, train loss: 23.191736
+
+epoch: 19, batch: 1600, train loss: 33.756714
+
+epoch: 19, batch: 1700, train loss: 29.064261
+
+epoch: 19, batch: 1800, train loss: 9.433497
+
+epoch: 19, batch: 1900, train loss: 24.571890
+
+epoch: 19, batch: 2000, train loss: 15.876155
+
+epoch: 19, batch: 2100, train loss: 13.400272
+
+epoch: 19, batch: 2200, train loss: 20.667838
+
+epoch: 19, batch: 2300, train loss: 32.720074
+
+epoch: 19, batch: 2400, train loss: 2.274469
+
+epoch: 19, batch: 2500, train loss: 18.066660
+
+epoch: 19, batch: 2600, train loss: 15.457925
+
+epoch: 19, batch: 2700, train loss: 14.532715
+
+epoch: 19, batch: 2800, train loss: 31.606232
+
+epoch: 19, batch: 2900, train loss: 22.085034
+
+epoch: 19, batch: 3000, train loss: 23.356955
+
+epoch: 19, batch: 3100, train loss: 15.020770
+
+epoch: 19, batch: 3200, train loss: 11.455930
+
+epoch: 19, batch: 3300, train loss: 20.976439
+
+epoch: 19, batch: 3400, train loss: 19.120111
+
+epoch: 19, batch: 3500, train loss: 25.251796
+
+epoch: 19, batch: 3600, train loss: 18.444910
+
+epoch: 19, batch: 3700, train loss: 2.526998
+
+epoch: 19, batch: 3800, train loss: 18.399034
+
+epoch: 19, batch: 3900, train loss: 5.589194
+
+epoch: 19, batch: 4000, train loss: 35.821152
+
+epoch: 19, batch: 4100, train loss: 21.927191
+
+epoch: 19, batch: 4200, train loss: 21.643507
+
+epoch: 19, batch: 4300, train loss: 29.871243
+
+epoch: 19, batch: 4400, train loss: 5.886137
+
+epoch: 19, batch: 4500, train loss: 34.634521
+
+epoch: 19, batch: 4600, train loss: 25.589464
+
+epoch: 19, batch: 4700, train loss: 10.680173
+
+epoch: 19, batch: 4800, train loss: 11.276685
+
+epoch: 19, batch: 4900, train loss: 11.282903
+
+epoch: 19, batch: 5000, train loss: 15.619632
+
+epoch: 19, batch: 5100, train loss: 20.545361
+
+epoch: 19, batch: 5200, train loss: 28.539270
+
+epoch: 19, batch: 5300, train loss: 18.984076
+
+epoch: 19, batch: 5400, train loss: 32.618356
+
+epoch: 19, batch: 5500, train loss: 8.808967
+
+epoch: 19, batch: 5600, train loss: 16.927113
+
+epoch: 19, batch: 5700, train loss: 6.768640
+
+
+----------Begin test...
+--------Time: 20556.615098 sec, epoch: 19, train loss: 19.206928, test loss: 37.927524
+save parameters at ./checkpoints/libri/epoch_19
+epoch: 20, batch: 0, train loss: 39.526605
+
+epoch: 20, batch: 100, train loss: 27.057501
+
+epoch: 20, batch: 200, train loss: 23.644125
+
+epoch: 20, batch: 300, train loss: 27.505429
+
+epoch: 20, batch: 400, train loss: 26.186731
+
+epoch: 20, batch: 500, train loss: 11.357210
+
+epoch: 20, batch: 600, train loss: 28.381180
+
+epoch: 20, batch: 700, train loss: 17.364796
+
+epoch: 20, batch: 800, train loss: 3.832092
+
+epoch: 20, batch: 900, train loss: 12.743585
+
+epoch: 20, batch: 1000, train loss: 33.950049
+
+epoch: 20, batch: 1100, train loss: 25.431561
+
+epoch: 20, batch: 1200, train loss: 27.980688
+
+epoch: 20, batch: 1300, train loss: 24.068105
+
+epoch: 20, batch: 1400, train loss: 0.705535
+
+epoch: 20, batch: 1500, train loss: 20.135094
+
+epoch: 20, batch: 1600, train loss: 14.895056
+
+epoch: 20, batch: 1700, train loss: 17.768028
+
+epoch: 20, batch: 1800, train loss: 10.972333
+
+epoch: 20, batch: 1900, train loss: 15.120779
+
+epoch: 20, batch: 2000, train loss: 17.414070
+
+epoch: 20, batch: 2100, train loss: 23.138208
+
+epoch: 20, batch: 2200, train loss: 1.439723
+
+epoch: 20, batch: 2300, train loss: 13.306726
+
+epoch: 20, batch: 2400, train loss: 37.746411
+
+epoch: 20, batch: 2500, train loss: 17.266452
+
+epoch: 20, batch: 2600, train loss: 4.385730
+
+epoch: 20, batch: 2700, train loss: 7.014870
+
+epoch: 20, batch: 2800, train loss: 13.693570
+
+epoch: 20, batch: 2900, train loss: 22.895583
+
+epoch: 20, batch: 3000, train loss: 26.208154
+
+epoch: 20, batch: 3100, train loss: 9.408168
+
+epoch: 20, batch: 3200, train loss: 20.552271
+
+epoch: 20, batch: 3300, train loss: 26.858295
+
+epoch: 20, batch: 3400, train loss: 39.802637
+
+epoch: 20, batch: 3500, train loss: 23.251868
+
+epoch: 20, batch: 3600, train loss: 19.746826
+
+epoch: 20, batch: 3700, train loss: 34.238400
+
+epoch: 20, batch: 3800, train loss: 22.146263
+
+epoch: 20, batch: 3900, train loss: 2.850870
+
+epoch: 20, batch: 4000, train loss: 22.708527
+
+epoch: 20, batch: 4100, train loss: 16.676538
+
+epoch: 20, batch: 4200, train loss: 18.538721
+
+epoch: 20, batch: 4300, train loss: 23.187343
+
+epoch: 20, batch: 4400, train loss: 28.522614
+
+epoch: 20, batch: 4500, train loss: 17.870302
+
+epoch: 20, batch: 4600, train loss: 28.097269
+
+epoch: 20, batch: 4700, train loss: 18.725719
+
+epoch: 20, batch: 4800, train loss: 24.783899
+
+epoch: 20, batch: 4900, train loss: 18.511096
+
+epoch: 20, batch: 5000, train loss: 4.772294
+
+epoch: 20, batch: 5100, train loss: 17.609520
+
+epoch: 20, batch: 5200, train loss: 29.530130
+
+epoch: 20, batch: 5300, train loss: 13.811368
+
+epoch: 20, batch: 5400, train loss: 10.453018
+
+epoch: 20, batch: 5500, train loss: 11.265864
+
+epoch: 20, batch: 5600, train loss: 18.105251
+
+epoch: 20, batch: 5700, train loss: 14.685768
+
+
+----------Begin test...
+--------Time: 20556.536434 sec, epoch: 20, train loss: 19.480118, test loss: 38.071933
+save parameters at ./checkpoints/libri/epoch_20
+epoch: 21, batch: 0, train loss: 12.005270
+
+epoch: 21, batch: 100, train loss: 25.259003
+
+epoch: 21, batch: 200, train loss: 38.101193
+
+epoch: 21, batch: 300, train loss: 26.792252
+
+epoch: 21, batch: 400, train loss: 17.914145
+
+epoch: 21, batch: 500, train loss: 13.767575
+
+epoch: 21, batch: 600, train loss: 49.984390
+
+epoch: 21, batch: 700, train loss: 24.440637
+
+epoch: 21, batch: 800, train loss: 33.600882
+
+epoch: 21, batch: 900, train loss: 12.016714
+
+epoch: 21, batch: 1000, train loss: 16.416982
+
+epoch: 21, batch: 1100, train loss: 17.744815
+
+epoch: 21, batch: 1200, train loss: 14.510840
+
+epoch: 21, batch: 1300, train loss: 16.781732
+
+epoch: 21, batch: 1400, train loss: 15.371173
+
+epoch: 21, batch: 1500, train loss: 11.337866
+
+epoch: 21, batch: 1600, train loss: 14.845886
+
+epoch: 21, batch: 1700, train loss: 25.135034
+
+epoch: 21, batch: 1800, train loss: 28.826981
+
+epoch: 21, batch: 1900, train loss: 27.298755
+
+epoch: 21, batch: 2000, train loss: 22.510988
+
+epoch: 21, batch: 2100, train loss: 18.814662
+
+epoch: 21, batch: 2200, train loss: 13.781142
+
+epoch: 21, batch: 2300, train loss: 5.336477
+
+epoch: 21, batch: 2400, train loss: 19.389015
+
+epoch: 21, batch: 2500, train loss: 31.643024
+
+epoch: 21, batch: 2600, train loss: 3.716270
+
+epoch: 21, batch: 2700, train loss: 1.279435
+
+epoch: 21, batch: 2800, train loss: 29.184393
+
+epoch: 21, batch: 2900, train loss: 21.312422
+
+epoch: 21, batch: 3000, train loss: 22.731993
+
+epoch: 21, batch: 3100, train loss: 20.882347
+
+epoch: 21, batch: 3200, train loss: 21.925929
+
+epoch: 21, batch: 3300, train loss: 28.052194
+
+epoch: 21, batch: 3400, train loss: 14.846776
+
+epoch: 21, batch: 3500, train loss: 22.447824
+
+epoch: 21, batch: 3600, train loss: 16.478851
+
+epoch: 21, batch: 3700, train loss: 22.645139
+
+epoch: 21, batch: 3800, train loss: 33.668961
+
+epoch: 21, batch: 3900, train loss: 16.527353
+
+epoch: 21, batch: 4000, train loss: 25.304852
+
+epoch: 21, batch: 4100, train loss: 15.020039
+
+epoch: 21, batch: 4200, train loss: 27.568936
+
+epoch: 21, batch: 4300, train loss: 24.908554
+
+epoch: 21, batch: 4400, train loss: 29.643143
+
+epoch: 21, batch: 4500, train loss: 12.211604
+
+epoch: 21, batch: 4600, train loss: 20.791072
+
+epoch: 21, batch: 4700, train loss: 13.658458
+
+epoch: 21, batch: 4800, train loss: 12.204227
+
+epoch: 21, batch: 4900, train loss: 36.688510
+
+epoch: 21, batch: 5000, train loss: 19.334869
+
+epoch: 21, batch: 5100, train loss: 4.662865
+
+epoch: 21, batch: 5200, train loss: 27.738675
+
+epoch: 21, batch: 5300, train loss: 17.109940
+
+epoch: 21, batch: 5400, train loss: 30.988840
+
+epoch: 21, batch: 5500, train loss: 18.252199
+
+epoch: 21, batch: 5600, train loss: 15.022937
+
+epoch: 21, batch: 5700, train loss: 24.868948
+
+
+----------Begin test...
+--------Time: 20560.299233 sec, epoch: 21, train loss: 20.781139, test loss: 37.939542
+save parameters at ./checkpoints/libri/epoch_21
+epoch: 22, batch: 0, train loss: 26.058679
+
+epoch: 22, batch: 100, train loss: 0.922639
+
+epoch: 22, batch: 200, train loss: 14.341856
+
+epoch: 22, batch: 300, train loss: 9.408208
+
+epoch: 22, batch: 400, train loss: 18.997133
+
+epoch: 22, batch: 500, train loss: 23.069437
+
+epoch: 22, batch: 600, train loss: 38.729163
+
+epoch: 22, batch: 700, train loss: 14.047647
+
+epoch: 22, batch: 800, train loss: 18.109456
+
+epoch: 22, batch: 900, train loss: 15.852708
+
+epoch: 22, batch: 1000, train loss: 26.912320
+
+epoch: 22, batch: 1100, train loss: 16.948956
+
+epoch: 22, batch: 1200, train loss: 8.271240
+
+epoch: 22, batch: 1300, train loss: 18.562231
+
+epoch: 22, batch: 1400, train loss: 1.133558
+
+epoch: 22, batch: 1500, train loss: 30.747437
+
+epoch: 22, batch: 1600, train loss: 15.648373
+
+epoch: 22, batch: 1700, train loss: 13.996611
+
+epoch: 22, batch: 1800, train loss: 12.885681
+
+epoch: 22, batch: 1900, train loss: 42.254572
+
+epoch: 22, batch: 2000, train loss: 15.287892
+
+epoch: 22, batch: 2100, train loss: 24.476799
+
+epoch: 22, batch: 2200, train loss: 29.005301
+
+epoch: 22, batch: 2300, train loss: 32.628278
+
+epoch: 22, batch: 2400, train loss: 23.209714
+
+epoch: 22, batch: 2500, train loss: 17.778809
+
+epoch: 22, batch: 2600, train loss: 29.873230
+
+epoch: 22, batch: 2700, train loss: 19.565668
+
+epoch: 22, batch: 2800, train loss: 39.197079
+
+epoch: 22, batch: 2900, train loss: 10.673982
+
+epoch: 22, batch: 3000, train loss: 25.288397
+
+epoch: 22, batch: 3100, train loss: 25.107092
+
+epoch: 22, batch: 3200, train loss: 17.545540
+
+epoch: 22, batch: 3300, train loss: 44.322351
+
+^CTraceback (most recent call last):
+  File "train.py", line 142, in <module>
+    main()
+  File "train.py", line 138, in main
+    train()
+  File "train.py", line 133, in train
+    test_off=args.test_off)
+  File "/home/sixiangz/DeepSpeech/model_utils/model.py", line 349, in train
+    return_numpy=False)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 778, in run
+    use_program_cache=use_program_cache)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 843, in _run_impl
+    return_numpy=return_numpy)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 677, in _run_parallel
+    tensors = exe.run(fetch_var_names)._move_to_list()
+KeyboardInterrupt
+
+(base) sixiangz@Aya-Suisei:~/DeepSpeech/examples/librispeech$ sh run_test_100.sh 
+Download language model ...
+./common_crawl_00.prune01111.trie.klm already exists, download skipped.
+-----------  Configuration Arguments -----------
+alpha: 2.5
+batch_size: 128
+beam_size: 500
+beta: 0.3
+cutoff_prob: 1.0
+cutoff_top_n: 40
+decoding_method: ctc_beam_search
+error_rate_type: wer
+lang_model_path: models/lm/common_crawl_00.prune01111.trie.klm
+mean_std_path: data/librispeech/mean_std.npz
+model_path: checkpoints/libri/100/epoch_20
+num_conv_layers: 2
+num_proc_bsearch: 8
+num_rnn_layers: 3
+rnn_layer_size: 2048
+share_rnn_weights: 1
+specgram_type: linear
+test_manifest: data/librispeech/manifest.test-clean
+use_gpu: 1
+use_gru: 0
+vocab_path: data/librispeech/vocab.txt
+------------------------------------------------
+2020-03-28 09:47:51,336-INFO: begin to initialize the external scorer for decoding
+2020-03-28 09:48:21,250-INFO: language model: is_character_based = 0, max_order = 5, dict_size = 400000
+2020-03-28 09:48:21,251-INFO: end initializing scorer
+2020-03-28 09:48:21,251-INFO: start evaluation ...
+W0328 09:48:27.651283 20048 device_context.cc:237] Please NOTE: device: 0, CUDA Capability: 61, Driver API Version: 10.1, Runtime API Version: 10.0
+W0328 09:48:27.741858 20048 device_context.cc:245] device: 0, cuDNN Version: 7.6.
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (128/?) = 0.128894
+Killed
+Failed in evaluation!
+(base) sixiangz@Aya-Suisei:~/DeepSpeech/examples/librispeech$ sh run_test_100.sh 
+Download language model ...
+./common_crawl_00.prune01111.trie.klm already exists, download skipped.
+-----------  Configuration Arguments -----------
+alpha: 2.5
+batch_size: 64
+beam_size: 500
+beta: 0.3
+cutoff_prob: 1.0
+cutoff_top_n: 40
+decoding_method: ctc_beam_search
+error_rate_type: wer
+lang_model_path: models/lm/common_crawl_00.prune01111.trie.klm
+mean_std_path: data/librispeech/mean_std.npz
+model_path: checkpoints/libri/100/epoch_20
+num_conv_layers: 2
+num_proc_bsearch: 8
+num_rnn_layers: 3
+rnn_layer_size: 2048
+share_rnn_weights: 1
+specgram_type: linear
+test_manifest: data/librispeech/manifest.test-clean
+use_gpu: 1
+use_gru: 0
+vocab_path: data/librispeech/vocab.txt
+------------------------------------------------
+2020-03-28 09:50:39,561-INFO: begin to initialize the external scorer for decoding
+2020-03-28 09:51:09,620-INFO: language model: is_character_based = 0, max_order = 5, dict_size = 400000
+2020-03-28 09:51:09,622-INFO: end initializing scorer
+2020-03-28 09:51:09,622-INFO: start evaluation ...
+W0328 09:51:13.448770 20095 device_context.cc:237] Please NOTE: device: 0, CUDA Capability: 61, Driver API Version: 10.1, Runtime API Version: 10.0
+W0328 09:51:13.537015 20095 device_context.cc:245] device: 0, cuDNN Version: 7.6.
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (64/?) = 0.080192
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (128/?) = 0.128894
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (192/?) = 0.113901
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (256/?) = 0.110698
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (320/?) = 0.105592
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (384/?) = 0.104589
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (448/?) = 0.104297
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (512/?) = 0.110607
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (576/?) = 0.115914
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (640/?) = 0.114841
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (704/?) = 0.118370
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (768/?) = 0.122426
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (832/?) = 0.122608
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (896/?) = 0.125500
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (960/?) = 0.133557
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+Error rate [wer] (1024/?) = 0.135567
+finish initing model from pretrained params from checkpoints/libri/100/epoch_20
+^CTraceback (most recent call last):
+  File "test.py", line 149, in <module>
+    main()
+  File "test.py", line 145, in main
+    evaluate()
+  File "test.py", line 113, in evaluate
+    feeding_dict=data_generator.feeding)
+  File "/home/sixiangz/DeepSpeech/model_utils/model.py", line 424, in infer_batch_probs
+    return_numpy=False)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 778, in run
+    use_program_cache=use_program_cache)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 831, in _run_impl
+    use_program_cache=use_program_cache)
+  File "/home/sixiangz/anaconda2/lib/python2.7/site-packages/paddle/fluid/executor.py", line 905, in _run_program
+    fetch_var_name)
+KeyboardInterrupt
+
