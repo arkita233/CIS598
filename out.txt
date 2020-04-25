@@ -1,0 +1,132 @@
+0
+00:00:00,000 --> 00:00:31,197
+in the future self-driving cars will be safer and more reliable than humans but for this to happen we need technologies that allow cars to respond faster than humans we need algorithms that can drive better than humans and we need cameras that can see more than humans can see
+
+1
+00:00:32,045 --> 00:00:40,637
+for example imagine a self-driving car is about to make a blind turn and there's an oncoming car or perhaps there's a child about to run into the street
+
+2
+00:00:41,313 --> 00:00:48,886
+fortunately our future car will have the superpower a camera that can see around corners to detect these potential hazards
+
+3
+00:00:49,450 --> 00:01:02,795
+for the past few years as a PhD student in the Stanford computational Imaging lab I've been working on a camera that can do just this a camera that can image objects hidden around corners or blocked from direct line of sight
+
+4
+00:01:03,278 --> 00:01:35,047
+so let me give you an example of what our camera can see this is an outdoor experiment we conducted where are camera system is scanning the side of this building with the laser and the scene that we want to capture is hidden around the corner behind this curtain so our camera system can't actually see it directly and yet somehow our camera can still capture the 3D geometry of the scene so how do we do this and you can think of this as a type of high speed camera
+
+5
+00:01:35,578 --> 00:01:44,149
+not one that operates at a thousand frames per second or even a million frames per second but a trillion frames per second
+
+6
+00:01:44,584 --> 00:01:49,751
+so fast that I can actually capture the movement of life itself
+
+7
+00:01:50,464 --> 00:02:01,410
+I'll give you an example of just how fast light travels let's compare it to the speed of a fast running comic book superhero who can move it up to three times the speed of sound
+
+8
+00:02:02,032 --> 00:02:16,038
+it takes a pulse of Life about 3.3 billionths of a second or 3.3 nanoseconds to travel the distance of a meter well in that same time our superhero has moved less than the width of a human hair
+
+9
+00:02:16,614 --> 00:02:17,613
+that's pretty fast
+
+10
+00:02:18,199 --> 00:02:23,947
+but actually we need to image much faster if you want to capture light moving at subcentimeter Scales
+
+11
+00:02:24,532 --> 00:02:32,402
+door camera system can capture photons at time frames of just 50 trillionth of a second or 50 picoseconds
+
+12
+00:02:33,417 --> 00:02:50,231
+we take this Ultra high-speed camera and we pair it with the laser that sends out short pulses of light each pulse travels to this visible wall and some light scatters back door camera but we also use the wall to scatter light around the corner to the hidden object and back
+
+13
+00:02:50,996 --> 00:03:03,786
+we repeat this measurement many times to capture the arrival times of many photons from different locations on the wall and after we capture these measurements we can create a trillion frames per second video of the wall
+
+14
+00:03:04,365 --> 00:03:11,835
+well this world may look ordinary to our own eyes at a trillion frames per second we can see something truly incredible
+
+15
+00:03:12,278 --> 00:03:32,267
+we can actually see waves of light scattered back from the hidden scene and splashing against the wall and each of these waves carries information about the hidden object that sent it so we can take these measurements and pass them into a reconstruction algorithm to then recover the 3D geometry of this hidden scene
+
+16
+00:03:33,363 --> 00:03:39,933
+now I want to show you one more example of an indoor scene that we captured this time with a variety of different hidden objects
+
+17
+00:03:40,333 --> 00:03:52,440
+Eliza objects have different appearances so they reflect light differently for example this glossy dragon statue reflects light differently than the mirror disco ball or the white discus thrower statue
+
+18
+00:03:52,994 --> 00:04:06,638
+do we can actually see the differences in the reflected Life by visualizing it as this 3D Volume where we've just taken the video frames and stack them together and time here is represented as the depth dimension of this Cube
+
+19
+00:04:07,603 --> 00:04:23,323
+is bright dots that you see our reflections of light from each of the mirrored facets of the disco ball scattering against the wall over time the bright streaks of light that you see arriving soonest in time are from the glossy dragon statue that's closest to the wall
+
+20
+00:04:23,954 --> 00:04:36,187
+and the other streaks of light come from reflections of light from the bookcase and from the statue we can also visualize these measurements frame-by-frame as a video to directly see the scattered light
+
+21
+00:04:37,227 --> 00:04:47,716
+and again here we see first reflections of light from the dragon closest to the wall followed by bright dots from the disco ball and other Reflections from the bookcase
+
+22
+00:04:48,396 --> 00:04:52,661
+and finally we see the reflected waves of light from the statue
+
+23
+00:04:53,531 --> 00:05:01,127
+these waves of light Illuminating the wall are like fireworks that last for just trillionth of a second
+
+24
+00:05:05,326 --> 00:05:14,028
+and even though these objects reflect light differently we can still reconstruct their shapes and this is what you can see from around the corner
+
+25
+00:05:14,760 --> 00:05:26,482
+now I want to show you one more example that's slightly different in this video you see me dressed in this reflective suit and our camera system is scanning the wall at a rate of 4 times every second
+
+26
+00:05:27,158 --> 00:05:47,900
+suit is reflective so we can actually capture enough photons that we can see where I am and what I'm doing without the camera actually directly Imaging Me by capturing photons that scatter from the wall to my tracksuit back to the wall and back to the camera we can capture this indirect video in real time
+
+27
+00:05:48,724 --> 00:06:01,394
+and we think that this type of practical non-line-of-sight Imaging could be useful for applications including for self-driving cars but also for biomedical Imaging where we need to see into the tiny structures of the body
+
+28
+00:06:01,963 --> 00:06:07,854
+perhaps we could also put similar camera systems on the robots that we send to explore other planets
+
+29
+00:06:08,449 --> 00:06:27,394
+they may have heard about see around corners before but what I showed you today would have been impossible just two years ago for example we can now image large room size hidden scenes outdoors and it real-time rates and we made significant advancements worth making this a practical technology they could actually see on a car Sunday
+
+30
+00:06:28,020 --> 00:06:37,043
+of course they're still challenges remaining for samples can we image hidden scenes at long distances we're collecting very very few photons
+
+31
+00:06:37,823 --> 00:06:48,220
+with lasers that are low power and that are eye safe or can we create images from photons have scattered around many more times than just a single bounce around the corner
+
+32
+00:06:48,668 --> 00:07:35,070
+can we take our prototype system that's well currently large and bulky and miniaturize it into something that could be useful for biomedical Imaging or perhaps a sort of improved home security system or can we take the new Imaging modality and use it for other applications I think it's an exciting new technology and there could be other things that we haven't thought of yet to use it for and so well a future with self-driving cars may seem distant to us now we're already developing the technologies that could make cars safer and more intelligent and with the rapid pace of scientific discovery and Innovation you never know what new and exciting capabilities could be just around the corner
+

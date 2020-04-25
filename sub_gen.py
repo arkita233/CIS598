@@ -3,6 +3,7 @@
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import speech_recognition as sr
+from moviepy.editor import *
 
 
 # convert files to wav with Pydub and ffmpeg
@@ -68,10 +69,15 @@ def str_to_file(texts):
 if __name__ == '__main__':
     r = sr.Recognizer()
     # Read sound file
-    sound_file = AudioSegment.from_file('genevieve.wav')
+    # sound_file = AudioSegment.from_file('out_file/genevieve.wav')
+    video = VideoFileClip('video/test.mp4')
+    audio = video.audio
+    audio.write_audiofile('video/test.mp3')
+    sound_file = AudioSegment.from_file('video/test.mp3')
 
-    min_silence_len = 660
-    silence_thresh = -36
+    min_silence_len = 600
+    silence_thresh = -65
+
     # Cut audio, get 3 lists of pieces, start time and end time
     pieces, start_t, end_t = split_on_silence(sound_file, min_silence_len, silence_thresh)
 
