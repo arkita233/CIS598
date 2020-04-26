@@ -1,11 +1,12 @@
-import mutagen
+
 import pandas as pd
-from mutagen.mp3 import MP3
+import soundfile
+
 
 audio_path = "/home/sixiangz/DeepSpeech/dataset/en/clips/"
 
 tsv = pd.read_csv('/home/sixiangz/DeepSpeech/dataset/en/train.tsv', sep='\t')
-
+tsv = tsv.head(20000)
 print(tsv.head())
 path = []
 dur = []
@@ -16,6 +17,8 @@ p = 0
 c = 0.0
 # song = mediainfo("common_voice_en_18540003.mp3")
 # print(song['duration'])
+tsv["path"] = tsv["path"].str.replace(".mp3", ".wav")
+
 
 for i in tsv.path:
     st = "./dataset/en/clips/" + i
@@ -30,12 +33,9 @@ for i in tsv.path:
     c+=1
     st2 = audio_path + i
     audio_filepath = st2
-    try:
-        audio = MP3(st2)
-    except mutagen.mp3.HeaderNotFoundError:
-        dur.append("error")
-    else:
-        dur.append(audio.info.length)
+    audio_data, samplerate = soundfile.read(audio_filepath)
+    duration = float(len(audio_data)) / samplerate
+    dur.append(duration)
 
 
     p = c*100/len(tsv)

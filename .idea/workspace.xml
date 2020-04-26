@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0b5712ff-2d14-4dcd-8698-6e26578ab4a0" name="Default Changelist" comment="2020/3/14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/common_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/common_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/convert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/data_clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/manifest.dev-clean" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/manifest.dev-clean" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/manifest.test-clean" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/manifest.test-clean" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/common/manifest.train" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/manifest.train" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runshell/dev.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/dev_cleaned.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/test_cleaned.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runshell/train_cleaned.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +49,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="Python.convert">
-    <configuration name="common_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.creat_mainfest (1)">
+    <configuration name="common_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="598" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,11 +58,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common/common_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="convert (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="598" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common/convert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="creat_mainfest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="creat_mainfest (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="598" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +121,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/creat_mainfest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common/creat_mainfest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_clean" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="data_clean (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="598" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,32 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/data_clean.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="t_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="598" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/t_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common/data_clean.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.creat_mainfest (1)" />
+        <item itemvalue="Python.data_clean (1)" />
+        <item itemvalue="Python.common_main (1)" />
+        <item itemvalue="Python.convert (1)" />
         <item itemvalue="Python.convert" />
-        <item itemvalue="Python.creat_mainfest" />
-        <item itemvalue="Python.data_clean" />
-        <item itemvalue="Python.common_main" />
-        <item itemvalue="Python.t_main" />
       </list>
     </recent_temporary>
   </component>
@@ -206,54 +216,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="326" y="289" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581914304498" />
-    <state width="1830" height="297" key="GridCell.Tab.0.bottom" timestamp="1587929966816">
+    <state width="1830" height="297" key="GridCell.Tab.0.bottom" timestamp="1587936195562">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="1353" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
-    <state width="1830" height="297" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587929966816" />
-    <state width="1830" height="297" key="GridCell.Tab.0.center" timestamp="1587929966815">
+    <state width="1830" height="297" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195562" />
+    <state width="1830" height="297" key="GridCell.Tab.0.center" timestamp="1587936195562">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="1353" height="289" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
-    <state width="1830" height="297" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587929966815" />
-    <state width="1830" height="297" key="GridCell.Tab.0.left" timestamp="1587929966815">
+    <state width="1830" height="297" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195562" />
+    <state width="1830" height="297" key="GridCell.Tab.0.left" timestamp="1587936195562">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="1353" height="289" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
-    <state width="1830" height="297" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587929966815" />
-    <state width="1830" height="297" key="GridCell.Tab.0.right" timestamp="1587929966816">
+    <state width="1830" height="297" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195562" />
+    <state width="1830" height="297" key="GridCell.Tab.0.right" timestamp="1587936195562">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="1353" height="289" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
-    <state width="1830" height="297" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587929966816" />
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1587927879196">
+    <state width="1830" height="297" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195562" />
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1587936195547">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="936" height="362" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584173057412" />
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587927879196" />
-    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1587927879196">
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195547" />
+    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1587936195547">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="936" height="362" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584173057412" />
-    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587927879196" />
-    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1587927879196">
+    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195547" />
+    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1587936195547">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="936" height="362" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584173057412" />
-    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587927879196" />
-    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1587927879196">
+    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195547" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1587936195547">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="936" height="362" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584173057412" />
-    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587927879196" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195547" />
     <state x="512" y="191" key="SettingsEditor" timestamp="1584539651762">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
