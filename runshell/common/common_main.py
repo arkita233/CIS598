@@ -5,8 +5,8 @@ import soundfile
 
 audio_path = "/home/sixiangz/DeepSpeech/dataset/en/clips/"
 
-tsv = pd.read_csv('/home/sixiangz/DeepSpeech/dataset/en/train.tsv', sep='\t')
-tsv = tsv.head(20000)
+tsv = pd.read_csv('/home/sixiangz/DeepSpeech/dataset/en/test.tsv', sep='\t')
+tsv = tsv.head(10000)
 print(tsv.head())
 path = []
 dur = []
@@ -35,6 +35,7 @@ for i in tsv.path:
     audio_filepath = st2
     audio_data, samplerate = soundfile.read(audio_filepath)
     duration = float(len(audio_data)) / samplerate
+    duration = round(duration,2)
     dur.append(duration)
 
 
@@ -45,7 +46,7 @@ print("dur done")
 data = {"audio_filepath": path, "text": tex, "duration": dur}
 
 frame = pd.DataFrame(data)
-frame.to_csv("train.csv")
+frame.to_csv("test.csv")
 
 
 

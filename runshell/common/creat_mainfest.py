@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import codecs
 
-csv_data = pd.read_csv("train_cleaned.csv")
+csv_data = pd.read_csv("test_cleaned.csv")
 csv_data = csv_data.drop(columns='Unnamed: 0')
 
 print(csv_data.head())
@@ -23,7 +23,7 @@ while k < len(csv_data):
         d.append(json.dumps(dic))
     k += 1
 
-filename = 'manifest.train'
+filename = 'manifest.test-clean'
 with codecs.open(filename, 'w', 'utf-8') as f:
     for i in d:
         f.write(str(i) + '\n')
