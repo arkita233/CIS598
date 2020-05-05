@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b5712ff-2d14-4dcd-8698-6e26578ab4a0" name="Default Changelist" comment="2020/3/14">
+      <change beforePath="$PROJECT_DIR$/.idea/598.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/598.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/common_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/common_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/convert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/creat_mainfest.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/creat_mainfest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/data_clean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/dev.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/dev.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/dev_cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/dev_cleaned.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/manifest.dev-clean" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/manifest.dev-clean" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/runshell/common/manifest.test-clean" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/manifest.test-clean" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runshell/common/test_cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runshell/common/test_cleaned.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/test.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/video/test.mp3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +43,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.creat_mainfest (1)">
+  <component name="RunManager" selected="Python.sub_gen">
     <configuration name="common_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="598" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,27 +78,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/common/convert.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="convert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="598" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runshell" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runshell/convert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,13 +128,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sub_gen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="598" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sub_gen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sub_gen" />
         <item itemvalue="Python.creat_mainfest (1)" />
         <item itemvalue="Python.data_clean (1)" />
         <item itemvalue="Python.common_main (1)" />
         <item itemvalue="Python.convert (1)" />
-        <item itemvalue="Python.convert" />
       </list>
     </recent_temporary>
   </component>
@@ -215,29 +211,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="326" y="289" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581914304498" />
-    <state width="1830" height="297" key="GridCell.Tab.0.bottom" timestamp="1588034594563">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1899" height="289" key="GridCell.Tab.0.bottom" timestamp="1588690757921">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
-    <state width="1353" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
+    <state width="1899" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588690757921" />
     <state width="1830" height="297" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1588034594563" />
-    <state width="1830" height="297" key="GridCell.Tab.0.center" timestamp="1588034594563">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1899" height="289" key="GridCell.Tab.0.center" timestamp="1588690757921">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
-    <state width="1353" height="289" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
+    <state width="1899" height="289" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588690757921" />
     <state width="1830" height="297" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1588034594563" />
-    <state width="1830" height="297" key="GridCell.Tab.0.left" timestamp="1588034594562">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1899" height="289" key="GridCell.Tab.0.left" timestamp="1588690757921">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
-    <state width="1353" height="289" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
+    <state width="1899" height="289" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588690757921" />
     <state width="1830" height="297" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1588034594562" />
-    <state width="1830" height="297" key="GridCell.Tab.0.right" timestamp="1588034594563">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1899" height="289" key="GridCell.Tab.0.right" timestamp="1588690757921">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
-    <state width="1353" height="289" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584173648867" />
+    <state width="1899" height="289" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588690757921" />
     <state width="1830" height="297" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1588034594563" />
     <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1587936195547">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -263,17 +259,17 @@
     <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581966245902" />
     <state width="936" height="362" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584173057412" />
     <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587936195547" />
-    <state x="512" y="191" key="SettingsEditor" timestamp="1588026001003">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="461" y="168" key="SettingsEditor" timestamp="1588687903788">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581919282459" />
-    <state x="461" y="168" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583105159793" />
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1588687903788" />
     <state x="512" y="191" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1588026001003" />
-    <state x="689" y="375" key="com.intellij.ide.util.TipDialog" timestamp="1584537956790">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="645" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1588687892419">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581966606190" />
-    <state x="645" y="357" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584171174383" />
+    <state x="645" y="357" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588687892419" />
     <state x="689" y="375" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584537956790" />
     <state x="531" y="476" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584539566628">
       <screen x="67" y="27" width="1853" height="1053" />

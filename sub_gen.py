@@ -3,7 +3,9 @@
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import speech_recognition as sr
+
 from moviepy.editor import *
+import os
 
 
 # convert files to wav with Pydub and ffmpeg
@@ -61,7 +63,7 @@ def text_to_str(index, context, start_time, end_time):
 
 
 def str_to_file(texts):
-    with open('out.txt', 'a') as fp:
+    with open('out.srt', 'a') as fp:
         fp.write(texts)
         fp.close()
 
@@ -72,20 +74,31 @@ if __name__ == '__main__':
     # sound_file = AudioSegment.from_file('out_file/genevieve.wav')
     video = VideoFileClip('video/test.mp4')
     audio = video.audio
-    audio.write_audiofile('video/test.mp3')
+    if os.path.exists('video/test.mp3') is False:
+        audio.write_audiofile('video/test.mp3')
     sound_file = AudioSegment.from_file('video/test.mp3')
 
-    min_silence_len = 600
-    silence_thresh = -65
+    min_silence_len = 200
+    silence_thresh = -45
 
     # Cut audio, get 3 lists of pieces, start time and end time
     pieces, start_t, end_t = split_on_silence(sound_file, min_silence_len, silence_thresh)
 
+    if os.path.exists("out.srt"):
+        os.remove("out.srt")
+
     pieces_to_wav(pieces)
     for inx, val in enumerate(pieces):
         # get text
-        text = audio_to_text('%d.wav' % inx)
-        # print(text)
-        text_2 = text_to_str(inx, text, start_t[inx], end_t[inx])
-        str_to_file(text_2)
-        print(str((inx * 100 / len(pieces))) + '%')
+        try:
+            text = audio_to_text('%d.wav' % inx)
+        except sr.UnknownValueError:
+            continue
+        else:
+            # print(text)
+            text_2 = text_to_str(inx, text, start_t[inx], end_t[inx])
+
+            str_to_file(text_2)
+            p = (inx * 100 / len(pieces))
+
+            print('{:.2f}%'.format(p))
