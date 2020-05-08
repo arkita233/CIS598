@@ -25,5 +25,6 @@ https://www.ffmpeg.org/
 Pydub:
 https://github.com/jiaaro/pydub
 
-pyinstaller:
-http://www.pyinstaller.org/
+Pyinstaller
+http://www.pyinstaller.org
+
