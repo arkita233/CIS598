@@ -3,37 +3,14 @@
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import speech_recognition as sr
-
-from moviepy.editor import *
+import subprocess
 import os
-
-
-# convert files to wav with Pydub and ffmpeg
-def file_to_wav(audio, name):
-    audio.export("%s.wav" % name, format="wav")
 
 
 # convert pieces to wav with Pydub and ffmpeg
 def pieces_to_wav(audio_pieces):
     for index, value in enumerate(audio_pieces):
-        value.export('%d.wav' % index, format='wav')
-
-
-def write_to_txt(text):
-    with open('sub.txt', 'a') as f:
-        f.write(text)
-        f.close()
-
-
-# read pieces audio file
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
-
-
-def text_to_sub(index, text, start_time, end_time):
-    string_sub = index + '\n' + start_time + ' --> ' + end_time + '\n' + text + '\n\n'
-    return string_sub
+        value.export('tmp/%d.wav' % index, format='wav')
 
 
 def audio_to_text(audio_path):
@@ -45,15 +22,15 @@ def audio_to_text(audio_path):
 
 
 def ms_to_s(ms):
-    ms_part = ms % 1000
-    ms_part = str(ms_part).zfill(3)
-    s_part = (ms // 1000) % 60
-    s_part = str(s_part).zfill(2)
+    m_p = ms % 1000
+    m_p = str(m_p).zfill(3)
+    s_p = (ms // 1000) % 60
+    s_p = str(s_p).zfill(2)
     m_part = (ms // 1000) // 60
     m_part = str(m_part).zfill(2)
 
     # srt time
-    s_type = "00:" + m_part + ":" + s_part + "," + ms_part
+    s_type = "00:" + m_part + ":" + s_p + "," + m_p
     return s_type
 
 
@@ -63,42 +40,62 @@ def text_to_str(index, context, start_time, end_time):
 
 
 def str_to_file(texts):
-    with open('out.srt', 'a') as fp:
+    with open('video/out.srt', 'a') as fp:
         fp.write(texts)
         fp.close()
 
 
+def remove_file(path):
+    l = os.listdir(path)
+    for i in l:
+        c_path = os.path.join(path, i)
+        if os.path.isdir(c_path):
+            remove_file(c_path)
+        else:
+            os.remove(c_path)
+
+
 if __name__ == '__main__':
+    print("program start")
+    remove_file('tmp/')
     r = sr.Recognizer()
+
+    if not os.path.exists('video/test.wav'):
+        # -i: input -vn: video not -f: format
+        print("start extracting")
+        subprocess.call('ffmpeg -i video/test.mp4 -vn -f wav video/test.wav')
+
     # Read sound file
-    # sound_file = AudioSegment.from_file('out_file/genevieve.wav')
-    video = VideoFileClip('video/test.mp4')
-    audio = video.audio
-    if os.path.exists('video/test.mp3') is False:
-        audio.write_audiofile('video/test.mp3')
-    sound_file = AudioSegment.from_file('video/test.mp3')
+    sound_file = AudioSegment.from_file('video/test.wav')
 
     min_silence_len = 200
     silence_thresh = -45
 
+    print("start cutting audio to pieces")
     # Cut audio, get 3 lists of pieces, start time and end time
     pieces, start_t, end_t = split_on_silence(sound_file, min_silence_len, silence_thresh)
 
-    if os.path.exists("out.srt"):
-        os.remove("out.srt")
+    if os.path.exists("video/out.srt"):
+        os.remove("video/out.srt")
 
+    print("start exporting pieces")
     pieces_to_wav(pieces)
+    print("export over, start contact with API")
+
     for inx, val in enumerate(pieces):
         # get text
         try:
-            text = audio_to_text('%d.wav' % inx)
+            text = audio_to_text('tmp/%d.wav' % inx)
         except sr.UnknownValueError:
             continue
         else:
+
             # print(text)
             text_2 = text_to_str(inx, text, start_t[inx], end_t[inx])
 
             str_to_file(text_2)
             p = (inx * 100 / len(pieces))
 
-            print('{:.2f}%'.format(p))
+            o = '{:.2f}%'.format(p)
+            print("\b" * len(o), end='', flush=True)
+            print(o, end='')
