@@ -18,3 +18,9 @@ train-clean-100, test-clean-360
 
 Model:
 https://drive.google.com/open?id=1Fem2Tb-hKtXAGt_xnJKMewqXzv6cFZVu
+
+ffmpeg:
+https://www.ffmpeg.org/
+
+Pydub:
+https://github.com/jiaaro/pydub
