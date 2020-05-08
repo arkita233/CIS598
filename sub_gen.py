@@ -5,6 +5,9 @@ from pydub.silence import split_on_silence
 import speech_recognition as sr
 import subprocess
 import os
+import sys
+
+FILE_PATH = sys.argv[1]
 
 
 # convert pieces to wav with Pydub and ffmpeg
@@ -40,7 +43,7 @@ def text_to_str(index, context, start_time, end_time):
 
 
 def str_to_file(texts):
-    with open('video/out.srt', 'a') as fp:
+    with open('out.srt', 'a') as fp:
         fp.write(texts)
         fp.close()
 
@@ -60,13 +63,13 @@ if __name__ == '__main__':
     remove_file('tmp/')
     r = sr.Recognizer()
 
-    if not os.path.exists('video/test.wav'):
+    if not os.path.exists('test.wav'):
         # -i: input -vn: video not -f: format
         print("start extracting")
-        subprocess.call('ffmpeg -i video/test.mp4 -vn -f wav video/test.wav')
+        subprocess.call('ffmpeg -i '+FILE_PATH+' -vn -f wav test.wav')
 
     # Read sound file
-    sound_file = AudioSegment.from_file('video/test.wav')
+    sound_file = AudioSegment.from_file('test.wav')
 
     min_silence_len = 200
     silence_thresh = -45
@@ -75,8 +78,8 @@ if __name__ == '__main__':
     # Cut audio, get 3 lists of pieces, start time and end time
     pieces, start_t, end_t = split_on_silence(sound_file, min_silence_len, silence_thresh)
 
-    if os.path.exists("video/out.srt"):
-        os.remove("video/out.srt")
+    if os.path.exists("out.srt"):
+        os.remove("out.srt")
 
     print("start exporting pieces")
     pieces_to_wav(pieces)

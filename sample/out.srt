@@ -1,0 +1,12 @@
+1
+00:00:09,553 --> 00:00:17,473
+in the future self-driving cars will be safer and more reliable than humans
+
+2
+00:00:18,179 --> 00:00:23,351
+but for this to happen we need technologies that allow cars to respond faster than humans
+
+3
+00:00:23,452 --> 00:00:23,926
+we need
+
