@@ -38,7 +38,7 @@ def ms_to_s(ms):
 
 
 def text_to_str(index, context, start_time, end_time):
-    texts = str(index) + '\n' + ms_to_s(start_time) + ' --> ' + ms_to_s(end_time) + '\n' + text + '\n' + '\n'
+    texts = str(index) + '\n' + ms_to_s(start_time) + ' --> ' + ms_to_s(end_time) + '\n' + context + '\n' + '\n'
     return texts
 
 
@@ -64,8 +64,10 @@ if __name__ == '__main__':
     r = sr.Recognizer()
 
     if not os.path.exists('test.wav'):
-        # -i: input -vn: video not -f: format
+
         print("start extracting")
+
+        # -i: input -vn: video not -f: format
         subprocess.call('ffmpeg -i '+FILE_PATH+' -vn -f wav test.wav')
 
     # Read sound file
